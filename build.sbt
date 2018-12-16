@@ -14,3 +14,21 @@ libraryDependencies in ThisBuild ++= Seq(
   "org.scala-lang.modules" %% "scala-java8-compat" % "0.8.0",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2",
 )
+
+lazy val dataStructures = Project(
+  base = file("data-structures"),
+  id = "data-structures",
+)
+  .dependsOn(tools)
+  .settings(Seq(
+    Keys.name := "data-structures",
+    Keys.description := "Implementations of common data structures"
+  ))
+
+lazy val tools = Project(
+  base = file("tools"),
+  id = "tools"
+).settings(Seq(
+  Keys.name := "tools",
+  Keys.description := "Tools to share between projects"
+))
