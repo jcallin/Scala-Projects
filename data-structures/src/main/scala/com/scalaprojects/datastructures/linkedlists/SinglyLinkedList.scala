@@ -2,7 +2,7 @@ package com.scalaprojects.datastructures.linkedlists
 
 import scala.annotation.tailrec
 
-case class SinglyLinkedList(head: Option[Node])
+case class SinglyLinkedList(head: Option[SingleNode])
 
 object SinglyLinkedList {
   /** Return a [[SinglyLinkedList]] from a list of values
@@ -17,13 +17,13 @@ object SinglyLinkedList {
   /** Return the head of a singly linked list given a list of values
     * @param values for each node in the list
     */
-  def singlyLinkedListFromValues(values: List[AnyVal]): Option[Node] = {
+  def singlyLinkedListFromValues(values: List[AnyVal]): Option[SingleNode] = {
     @tailrec
-    def singlyLinkedListFromValuesHelper(values: List[AnyVal], acc: Option[Node]): Option[Node] = {
+    def singlyLinkedListFromValuesHelper(values: List[AnyVal], acc: Option[SingleNode]): Option[SingleNode] = {
       values match {
         case Nil => None
-        case head :: Nil => Some(Node(acc, head))
-        case head :: tail => singlyLinkedListFromValuesHelper(tail, Some(Node(acc, head)))
+        case head :: Nil => Some(SingleNode(acc, head))
+        case head :: tail => singlyLinkedListFromValuesHelper(tail, Some(SingleNode(acc, head)))
       }
     }
     singlyLinkedListFromValuesHelper(values, None)
