@@ -10,11 +10,12 @@ object SinglyLinkedList {
     */
   def apply(values: List[AnyVal]): SinglyLinkedList = {
     SinglyLinkedList(
-      singlyLinkedListFromValues(values.reverse)
+      singlyLinkedListFromValues(values)
     )
   }
 
-  /** Return the head of a singly linked list given a list of values
+  /** Return the head of a singly linked list given a list of values.
+    * The value of the head is the first value of the values list.
     * @param values for each node in the list
     */
   def singlyLinkedListFromValues(values: List[AnyVal]): Option[SingleNode] = {
@@ -26,6 +27,6 @@ object SinglyLinkedList {
         case head :: tail => singlyLinkedListFromValuesHelper(tail, Some(SingleNode(acc, head)))
       }
     }
-    singlyLinkedListFromValuesHelper(values, None)
+    singlyLinkedListFromValuesHelper(values.reverse, None)
   }
 }
