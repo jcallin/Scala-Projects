@@ -22,7 +22,7 @@ object SinglyLinkedList {
     def singlyLinkedListFromValuesHelper(values: List[AnyVal], acc: Option[SingleNode]): Option[SingleNode] = {
       values match {
         case Nil => None
-        case head :: Nil => Some(SingleNode(acc, head))
+        case head :: Nil => Some(SingleNode(next = acc, value = head))
         case head :: tail => singlyLinkedListFromValuesHelper(tail, Some(SingleNode(acc, head)))
       }
     }
