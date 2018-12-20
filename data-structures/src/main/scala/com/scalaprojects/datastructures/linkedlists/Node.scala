@@ -1,5 +1,9 @@
 package com.scalaprojects.datastructures.linkedlists
 
 /** Primitive Nodes for Linked Lists */
-case class SingleNode(next: Option[SingleNode], value: AnyVal)
-case class DoubleNode(next: Option[DoubleNode], prev: Option[DoubleNode], value: AnyVal)
+trait Node {
+  val next: Option[Node]
+  val value: AnyVal
+}
+case class SingleNode(override val next: Option[SingleNode], override val value: AnyVal) extends Node
+case class DoubleNode(override val next: Option[DoubleNode], prev: Option[DoubleNode], override val value: AnyVal) extends Node

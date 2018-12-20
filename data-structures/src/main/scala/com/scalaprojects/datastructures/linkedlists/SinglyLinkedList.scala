@@ -2,7 +2,7 @@ package com.scalaprojects.datastructures.linkedlists
 
 import scala.annotation.tailrec
 
-case class SinglyLinkedList(head: Option[SingleNode])
+case class SinglyLinkedList(head: Option[SingleNode]) extends LinkedListIterable(head: Option[SingleNode])
 
 object SinglyLinkedList {
   /** Return a [[SinglyLinkedList]] from a list of values

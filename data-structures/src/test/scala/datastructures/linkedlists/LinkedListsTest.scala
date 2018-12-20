@@ -14,5 +14,11 @@ class LinkedListsTest extends FunSpec with Matchers with SeveredStackTraces {
       val sll = SinglyLinkedList(List.empty)
       sll.head shouldBe None
     }
+    it("should be iterable") {
+      val sll = SinglyLinkedList(List(1, 2))
+      sll.next.get.value shouldBe 1
+      sll.next.get.value shouldBe 2
+      sll.next.get.value shouldBe None
+    }
   }
 }
