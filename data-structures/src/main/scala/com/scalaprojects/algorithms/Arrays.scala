@@ -14,8 +14,11 @@ object Arrays {
         case Array() => acc
         // Take the next element and put it in front of the accumulator.
         // The last element will be at the start of the accumulator
-        case Array(head, rest @ _*) => reverseArrayHelper(rest.toArray, Array(Array(head) ++ acc: _*))
-
+        case Array(head, rest @ _*) =>
+          // Must expand and use single parameter to initialize array
+          // because Array[T]'s constructor is Array(x: T*)
+          // If it were an Array[Int] we could use Array(x: Int, xs: Int*)
+          reverseArrayHelper(rest.toArray, Array(Array(head) ++ acc: _*))
       }
     }
     reverseArrayHelper(a, Array.empty[T])
