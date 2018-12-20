@@ -1,6 +1,6 @@
 package datastructures.linkedlists
 
-import com.scalaprojects.datastructures.linkedlists.SinglyLinkedList
+import com.scalaprojects.datastructures.linkedlists.{SingleNode, SinglyLinkedList}
 import org.scalatest.{FunSpec, Matchers, SeveredStackTraces}
 
 class LinkedListsTest extends FunSpec with Matchers with SeveredStackTraces {
@@ -18,7 +18,7 @@ class LinkedListsTest extends FunSpec with Matchers with SeveredStackTraces {
       val sll = SinglyLinkedList(List(1, 2))
       sll.next.get.value shouldBe 1
       sll.next.get.value shouldBe 2
-      sll.next.get.value shouldBe None
+      sll.next shouldBe None
     }
   }
 }
