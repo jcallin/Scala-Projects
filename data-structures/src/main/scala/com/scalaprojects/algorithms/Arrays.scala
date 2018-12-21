@@ -3,10 +3,11 @@ package com.scalaprojects.algorithms
 import scala.annotation.tailrec
 
 object Arrays {
-  /** Return a reversed array
+  /** Return an array reversed by recursion
     * @param a the array to reverse
+    * @tparam T the type of object in the array
     */
-  def reverseArray[T: Manifest](a: Array[T]): Array[T] = {
+  def reverseArrayRecursive[T: Manifest](a: Array[T]): Array[T] = {
     @tailrec
     def reverseArrayHelper(a: Array[T], acc: Array[T]): Array[T] = {
       a match {
@@ -22,5 +23,28 @@ object Arrays {
       }
     }
     reverseArrayHelper(a, Array.empty[T])
+  }
+
+  /** Return an array reversed by iteration
+    * @param a the array to reverse
+    * @tparam T the type of object in the array
+    */
+  def reverseArrayIterative[T](a: Array[T]): Array[T] = {
+    // Set up bounds
+    val start = 0
+    val end = a.length - 1
+    val mid = (a.length - 1) / 2
+
+    // Set up ranges
+    val i = start to mid
+    val j = end to mid by -1
+
+    // Reverse
+    for((i, j) <- i.zip(j)) {
+      val temp = a(i)
+      a.update(i, a(j))
+      a.update(j, temp)
+    }
+    a
   }
 }
