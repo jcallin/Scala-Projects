@@ -53,5 +53,15 @@ class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
         findMissingNumberIn(a) shouldBe 4
       }
     }
+    describe("when finding if all adjacent pairs in a list sum to a number") {
+      it("should determine for a non-empty even list") {
+        val a = List(0, 5, 1, 4, 2, 3, 4, 5)
+        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((0, 5), (1, 4), (2, 3), (5, 0))
+      }
+      it("should determine for a non-empty odd list") {
+        val a = List(0, 5, 1, 4, 2, 3, 5)
+        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((0, 5), (1, 4), (2, 3), (5, 0))
+      }
+    }
   }
 }
