@@ -63,5 +63,11 @@ class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
         findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((0, 5), (1, 4), (2, 3), (5, 0))
       }
     }
+    describe("when swapping 2 elements of an array") {
+      it("should swap 2 elements of a non-empty array") {
+        val a = Array(1,2,3,4,5)
+        swap(a, 1, 4) shouldBe Array(1,5,3,4,2)
+      }
+    }
   }
 }
