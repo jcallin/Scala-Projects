@@ -25,6 +25,16 @@ lazy val dataStructures = Project(
     Keys.description := "Implementations of common data structures"
   ))
 
+lazy val algorithms = Project(
+  base = file("algorithms"),
+  id = "algorithms",
+)
+  .dependsOn(tools)
+  .settings(Seq(
+    Keys.name := "algorithms",
+    Keys.description := "Implementations of algorithms"
+  ))
+
 lazy val tools = Project(
   base = file("tools"),
   id = "tools"

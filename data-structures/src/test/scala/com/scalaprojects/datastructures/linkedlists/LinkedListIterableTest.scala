@@ -1,4 +1,4 @@
-package datastructures.linkedlists
+package com.scalaprojects.datastructures.linkedlists
 
 import com.scalaprojects.datastructures.linkedlists.{ LinkedListIterable, Node }
 import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
