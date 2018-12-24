@@ -1,10 +1,10 @@
-package com.scalaprojects.algorithms
+package com.scalaprojects.algorithms.sorting
 
 import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
 
-class SortingTest extends FunSpec with Matchers with SeveredStackTraces {
+class QuickSortTest extends FunSpec with Matchers with SeveredStackTraces {
 
-  import Sorting._
+  import com.scalaprojects.algorithms.sorting.QuickSort._
 
   describe("Sorting algorithms") {
     it("should sort an array using quicksort") {

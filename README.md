@@ -6,4 +6,5 @@
   - [Singly Linked List](data-structures/src/main/scala/com/scalaprojects/datastructures/linkedlists/SinglyLinkedList.scala)
 ## Algorithms
 * [Array Algorithms](algorithms/src/main/scala/com/scalaprojects/algorithms/Arrays.scala)
-* [Sorting](algorithms/src/main/scala/com/scalaprojects/algorithms/Sorting.scala)
+* Sorting
+  - [Quicksort](algorithms/src/main/scala/com/scalaprojects/algorithms/sorting/QuickSort.scala)

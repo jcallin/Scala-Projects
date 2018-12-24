@@ -1,8 +1,8 @@
-package com.scalaprojects.algorithms
+package com.scalaprojects.algorithms.sorting
 
 import com.scalaprojects.algorithms.Arrays.swap
 
-object Sorting {
+object QuickSort {
   /**
    * Sort an array by quicksort
    * Time:  worst:   n2 (randomize partition index for nlogn average)
