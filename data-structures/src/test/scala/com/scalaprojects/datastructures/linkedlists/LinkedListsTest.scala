@@ -1,6 +1,5 @@
 package com.scalaprojects.datastructures.linkedlists
 
-import com.scalaprojects.datastructures.linkedlists.{ SingleNode, SinglyLinkedList }
 import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
 
 class LinkedListsTest extends FunSpec with Matchers with SeveredStackTraces {
