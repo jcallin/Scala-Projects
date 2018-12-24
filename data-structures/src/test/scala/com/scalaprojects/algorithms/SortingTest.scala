@@ -1,6 +1,6 @@
 package com.scalaprojects.algorithms
 
-import org.scalatest.{FunSpec, Matchers, SeveredStackTraces}
+import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
 
 class SortingTest extends FunSpec with Matchers with SeveredStackTraces {
 

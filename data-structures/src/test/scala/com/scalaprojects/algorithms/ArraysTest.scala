@@ -1,6 +1,6 @@
 package com.scalaprojects.algorithms
 
-import org.scalatest.{FunSpec, Matchers, SeveredStackTraces}
+import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
 
 class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
   import Arrays._
@@ -65,8 +65,8 @@ class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
     }
     describe("when swapping 2 elements of an array") {
       it("should swap 2 elements of a non-empty array") {
-        val a = Array(1,2,3,4,5)
-        swap(a, 1, 4) shouldBe Array(1,5,3,4,2)
+        val a = Array(1, 2, 3, 4, 5)
+        swap(a, 1, 4) shouldBe Array(1, 5, 3, 4, 2)
       }
     }
   }
