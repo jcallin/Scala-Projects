@@ -4,7 +4,6 @@
 // https://github.com/sbt/sbt-scalariform
 addSbtPlugin("org.scalariform" %% "sbt-scalariform" % "1.8.2")
 
-
 //TODO add code analysis with scapegoat
 // Scapegoat - static code analysis
 // https://github.com/sksamuel/sbt-scapegoat
@@ -16,7 +15,7 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
 
 // Scala compiler unitest coverage plugin
 // https://github.com/scoverage/sbt-scoverage
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.6.0-M5")
+addSbtPlugin("org.scoverage" %% "sbt-scoverage" % "1.6.0-M1")
 
 // Scala docs plugins
 

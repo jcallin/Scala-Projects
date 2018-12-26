@@ -1,8 +1,7 @@
-import com.typesafe.sbt.SbtScalariform.ScalariformKeys
-import scalariform.formatter.preferences._
-
 object Configurations {
-  ScalariformKeys.preferences := ScalariformKeys.preferences.value
+  import com.typesafe.sbt.SbtScalariform.ScalariformKeys._
+  import scalariform.formatter.preferences._
+  preferences := preferences.value
     .setPreference(AlignArguments, true)
     .setPreference(AlignParameters, true)
     .setPreference(AlignSingleLineCaseStatements, true)
@@ -12,3 +11,4 @@ object Configurations {
     .setPreference(FirstArgumentOnNewline, Preserve)
     .setPreference(FirstParameterOnNewline, Preserve)
 }
+
