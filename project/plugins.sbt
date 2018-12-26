@@ -9,6 +9,10 @@ addSbtPlugin("org.scalariform" %% "sbt-scalariform" % "1.8.2")
 // https://github.com/sksamuel/sbt-scapegoat
 //addSbtPlugin("com.sksamuel.scapegoat" %% "sbt-scapegoat" % "1.0.9")
 
+// Coveralls - integration with TravisCI for code coverage
+// https://github.com/scoverage/sbt-coveralls
+addSbtPlugin("org.scoverage" % "sbt-coveralls" % "1.2.7")
+
 // Scala style - static code analysis for SBT
 // http://www.scalastyle.org/sbt.html
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")

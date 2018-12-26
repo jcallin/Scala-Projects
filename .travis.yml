@@ -1,4 +1,4 @@
- # Use container-based infrastructure
+# Use container-based infrastructure
 sudo: false
 
 language: scala
@@ -17,7 +17,9 @@ cache:
 jdk: oraclejdk8
 
 script:
-   - sbt ++$TRAVIS_SCALA_VERSION coverage test coverageReport
+  - sbt ++$TRAVIS_SCALA_VERSION clean coverage test coverageReport && sbt coverageAggregate
+after_success:
+  - sbt coveralls
 
 before_cache:
   # Tricks to avoid unnecessary cache updates
