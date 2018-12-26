@@ -153,8 +153,7 @@ object Arrays {
   def swap[T](a: Array[T], idx1: Int, idx2: Int): Array[T] = {
     if (a.isEmpty || idx1 < 0 || idx2 < 0 || idx1 > a.length - 1 || idx2 > a.length - 1) {
       a
-    }
-    else {
+    } else {
       val temp = a(idx1)
       a.update(idx1, a(idx2))
       a.update(idx2, temp)

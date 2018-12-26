@@ -53,8 +53,7 @@ object QuickSort {
 
     if (a.isEmpty || a.length == 1) {
       a
-    }
-    else {
+    } else {
       quickSortHelper(a, 0, a.length - 1)
     }
   }
