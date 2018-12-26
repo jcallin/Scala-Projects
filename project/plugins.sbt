@@ -2,7 +2,7 @@
 
 // Scalinform - automatic compilation time code formatter
 // https://github.com/sbt/sbt-scalariform
-addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.8.2")
+addSbtPlugin("org.scalariform" %% "sbt-scalariform" % "1.8.2")
 
 
 //TODO add code analysis with scapegoat
