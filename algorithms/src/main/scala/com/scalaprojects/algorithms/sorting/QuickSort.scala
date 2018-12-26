@@ -19,13 +19,15 @@ object QuickSort {
         // Split the array around the partition point and send for partitioning of high and low sections
         quickSortHelper(a, start, pivotIndex - 1)
         quickSortHelper(a, pivotIndex + 1, end)
-      } else
+      } else {
         a
+      }
     }
 
     /**
      * Return an array with a section partitioned around that section's last value
-     * The last value takes a spot in the array such that all elements in the section to the left are smaller than it and all elements to the right in the section are larger than it
+     * The last value takes a spot in the array such that elements to its left are smaller and elements to its right are larger
+     * Elements in the array are swapped to achieve the above condition
      * @param a array to partition
      * @param start the start index of the section to partition
      * @param end the end index of the section to partition
@@ -35,7 +37,8 @@ object QuickSort {
 
       var pivotIndex = start
 
-      // Starting at the beginning of the array, search for a value less than the pivot value. Swap this value with the pivot index and move the pivot index forward.
+      // Starting at the beginning of the array, search for a value less than the pivot value.
+      // Swap this value with the pivot index and move the pivot index forward.
       // The pivot index starts at the beginning of the array and moves forward only when its value is swapped with a value lower than the pivot value.
       // This way the pivot value can be swapped with the ending pivot index to ensure smaller values are to the left of the pivot index
       for (counter <- start until end) {
@@ -48,7 +51,11 @@ object QuickSort {
       pivotIndex
     }
 
-    if (a.isEmpty || a.length == 1) a
-    else quickSortHelper(a, 0, a.length - 1)
+    if (a.isEmpty || a.length == 1) {
+      a
+    }
+    else {
+      quickSortHelper(a, 0, a.length - 1)
+    }
   }
 }

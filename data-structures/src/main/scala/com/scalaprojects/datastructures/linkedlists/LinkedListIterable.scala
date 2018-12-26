@@ -18,6 +18,8 @@ class LinkedListIterable(head: Option[Node]) extends Iterator[Option[Node]] {
         case _ => None
       }
       ret
-    } else None
+    } else {
+      None
+    }
   }
 }

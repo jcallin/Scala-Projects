@@ -131,7 +131,9 @@ object Arrays {
     def addToAcc(sum: Int, i1: Int, i2: Int): List[IntPair] = {
       if (checkSumIs(sum, i1, i2)) {
         List((i1, i2))
-      } else Nil
+      } else {
+        Nil
+      }
     }
 
     def checkSumIs(sum: Int, i1: Int, i2: Int): Boolean = {
@@ -149,8 +151,9 @@ object Arrays {
    * @tparam T type of elements in array being swapped
    */
   def swap[T](a: Array[T], idx1: Int, idx2: Int): Array[T] = {
-    if (a.isEmpty || idx1 < 0 || idx2 < 0 || idx1 > a.length - 1 || idx2 > a.length - 1)
+    if (a.isEmpty || idx1 < 0 || idx2 < 0 || idx1 > a.length - 1 || idx2 > a.length - 1) {
       a
+    }
     else {
       val temp = a(idx1)
       a.update(idx1, a(idx2))
