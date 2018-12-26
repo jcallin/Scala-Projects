@@ -1,5 +1,6 @@
 # Scala projects
 [![Build Status](https://travis-ci.org/jcallin/Scala-Projects.svg?branch=master)](https://travis-ci.org/jcallin/Scala-Projects)
+[![Coverage Status](https://coveralls.io/repos/github/jcallin/Scala-Projects/badge.svg?branch=master)](https://coveralls.io/github/jcallin/Scala-Projects?branch=master)
 
 ## Data Structures
 * Linked Lists
