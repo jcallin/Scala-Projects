@@ -3,7 +3,8 @@ package com.scalaprojects.algorithms.sorting
 import com.scalaprojects.algorithms.Arrays.swap
 
 object QuickSort {
-  /** Sort an array by quicksort
+  /**
+   * Sort an array by quicksort
    * Time:  worst:   n2 (randomize partition index for nlogn average)
    *        average: nlogn
    *        best:    n
@@ -22,7 +23,8 @@ object QuickSort {
         a
     }
 
-    /** Return an array with a section partitioned around that section's last value
+    /**
+     * Return an array with a section partitioned around that section's last value
      * The last value takes a spot in the array such that all elements in the section to the left are smaller than it and all elements to the right in the section are larger than it
      * @param a array to partition
      * @param start the start index of the section to partition
