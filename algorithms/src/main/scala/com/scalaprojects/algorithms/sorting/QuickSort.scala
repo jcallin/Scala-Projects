@@ -3,8 +3,7 @@ package com.scalaprojects.algorithms.sorting
 import com.scalaprojects.algorithms.Arrays.swap
 
 object QuickSort {
-  /**
-   * Sort an array by quicksort
+  /** Sort an array by quicksort
    * Time:  worst:   n2 (randomize partition index for nlogn average)
    *        average: nlogn
    *        best:    n
@@ -23,8 +22,7 @@ object QuickSort {
         a
     }
 
-    /**
-     * Return an array with a section partitioned around that section's last value
+    /** Return an array with a section partitioned around that section's last value
      * The last value takes a spot in the array such that all elements in the section to the left are smaller than it and all elements to the right in the section are larger than it
      * @param a array to partition
      * @param start the start index of the section to partition
@@ -35,15 +33,15 @@ object QuickSort {
 
       var pivotIndex = start
 
-      // Starting at the beginning of the array, search for a value less than the pivot value. Swap this value with the pivot index and move the pivot index forward
-      // This causes smaller values to be to the left of the pivot index
+      // Starting at the beginning of the array, search for a value less than the pivot value. Swap this value with the pivot index and move the pivot index forward.
+      // The pivot index starts at the beginning of the array and moves forward only when its value is swapped with a value lower than the pivot value.
+      // This way the pivot value can be swapped with the ending pivot index to ensure smaller values are to the left of the pivot index
       for (counter <- start until end) {
         if (a(counter) < pivotValue) {
           swap(a, counter, pivotIndex)
           pivotIndex += 1
         }
       }
-      // Once all smaller values are to the left of the pivot index, swap the pivot value into the pivot index spot. All values to the left will be smaller
       swap(a, pivotIndex, end)
       pivotIndex
     }
