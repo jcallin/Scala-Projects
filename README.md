@@ -9,3 +9,4 @@
 * [Array Algorithms](algorithms/src/main/scala/com/scalaprojects/algorithms/Arrays.scala)
 * Sorting
   - [Quicksort](algorithms/src/main/scala/com/scalaprojects/algorithms/sorting/QuickSort.scala)
+  - [MergeSort](algorithms/src/main/scala/com/scalaprojects/algorithms/sorting/MergeSort.scala)
