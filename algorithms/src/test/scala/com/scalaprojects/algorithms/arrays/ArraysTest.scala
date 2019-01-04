@@ -1,9 +1,15 @@
-package com.scalaprojects.algorithms
+package com.scalaprojects.algorithms.arrays
 
 import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
 
+import com.scalaprojects.algorithms.arrays.FindAdjacentPairsWhichSumToN.findAdjacentPairsWhoseSumIs
+import com.scalaprojects.algorithms.arrays.FindMissingNumberInRange.findMissingNumberIn
+import com.scalaprojects.algorithms.arrays.RemoveDuplicates.removeDups
+import com.scalaprojects.algorithms.arrays.ReverseArrayIterative.reverseArrayIterative
+import com.scalaprojects.algorithms.arrays.ReverseArrayRecursive.reverseArrayRecursive
+import com.scalaprojects.algorithms.arrays.SwapItems.swap
+
 class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
-  import Arrays._
   describe("array algorithms") {
     describe("when reversing an array by recursion") {
       it("should reverse a non empty array") {
