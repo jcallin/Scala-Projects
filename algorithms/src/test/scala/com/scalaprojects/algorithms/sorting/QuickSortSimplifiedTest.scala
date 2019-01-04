@@ -1,6 +1,6 @@
 package com.scalaprojects.algorithms.sorting
 
-import org.scalatest.{FunSpec, Matchers, SeveredStackTraces}
+import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
 
 class QuickSortSimplifiedTest extends FunSpec with Matchers with SeveredStackTraces {
 

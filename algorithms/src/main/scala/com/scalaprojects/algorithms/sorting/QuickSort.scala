@@ -1,6 +1,6 @@
 package com.scalaprojects.algorithms.sorting
 
-import com.scalaprojects.algorithms.Arrays.swap
+import com.scalaprojects.algorithms.arrays.SwapItems.swap
 
 object QuickSort {
   /**
