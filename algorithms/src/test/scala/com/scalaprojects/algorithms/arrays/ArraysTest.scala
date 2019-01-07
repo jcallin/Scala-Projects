@@ -8,6 +8,8 @@ import com.scalaprojects.algorithms.arrays.RemoveDuplicates.removeDups
 import com.scalaprojects.algorithms.arrays.ReverseArrayIterative.reverseArrayIterative
 import com.scalaprojects.algorithms.arrays.ReverseArrayRecursive.reverseArrayRecursive
 import com.scalaprojects.algorithms.arrays.SwapItems.swap
+import com.scalaprojects.algorithms.arrays.Rotation.leftRotation
+import com.scalaprojects.algorithms.arrays.Rotation.rightRotation
 
 class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
   describe("array algorithms") {
@@ -58,6 +60,10 @@ class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
         val a: Array[Int] = Array(1, 2, 3, 5, 6, 7, 8, 9, 10)
         findMissingNumberIn(a) shouldBe 4
       }
+      it("should find the missing number in an empty array") {
+        val a: Array[Int] = Array.empty[Int]
+        findMissingNumberIn(a) shouldBe 0
+      }
     }
     describe("when finding if all adjacent pairs in a list sum to a number") {
       it("should determine for a non-empty even list") {
@@ -73,6 +79,18 @@ class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
       it("should swap 2 elements of a non-empty array") {
         val a = Array(1, 2, 3, 4, 5)
         swap(a, 1, 4) shouldBe Array(1, 5, 3, 4, 2)
+      }
+    }
+    describe("when rotating an array to the left") {
+      it("should rotate a non-empty array to the left") {
+        val a = Array(1, 2, 3, 4, 5)
+        leftRotation(a, 2) shouldBe Array(3, 4, 5, 1, 2)
+      }
+    }
+    describe("when rotating an array to the right") {
+      it("should rotate a non-empty array to the right") {
+        val a = Array(1, 2, 3, 4, 5)
+        rightRotation(a, 2) shouldBe Array(4, 5, 1, 2, 3)
       }
     }
   }
