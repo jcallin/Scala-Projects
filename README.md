@@ -15,6 +15,7 @@
   - [Swap items](algorithms/src/main/scala/com/scalaprojects/algorithms/arrays/SwapItems.scala)
   - [Left rotation](algorithms/src/main/scala/com/scalaprojects/algorithms/arrays/Rotation.scala)
   - [Right rotation](algorithms/src/main/scala/com/scalaprojects/algorithms/arrays/Rotation.scala)
+  - [Bribing queue](algorithms/src/main/scala/com/scalaprojects/algorithms/arrays/BribingQueue.scala)
 * Sorting
   - [Quicksort (Simplified)](algorithms/src/main/scala/com/scalaprojects/algorithms/sorting/QuickSortSimplified.scala)
   - [Quicksort](algorithms/src/main/scala/com/scalaprojects/algorithms/sorting/QuickSort.scala)
