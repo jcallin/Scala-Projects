@@ -10,6 +10,7 @@ import com.scalaprojects.algorithms.arrays.ReverseArrayRecursive.reverseArrayRec
 import com.scalaprojects.algorithms.arrays.SwapItems.swap
 import com.scalaprojects.algorithms.arrays.Rotation.leftRotation
 import com.scalaprojects.algorithms.arrays.Rotation.rightRotation
+import com.scalaprojects.algorithms.arrays.BribingQueue.bribingQueue
 
 class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
   describe("array algorithms") {
@@ -91,6 +92,18 @@ class ArraysTest extends FunSpec with Matchers with SeveredStackTraces {
       it("should rotate a non-empty array to the right") {
         val a = Array(1, 2, 3, 4, 5)
         rightRotation(a, 2) shouldBe Array(4, 5, 1, 2, 3)
+      }
+    }
+    describe("when evaluating a bribing queue") {
+      it("should identify the number of bribes for a bribable queue") {
+        val a = Array(2, 1, 5, 3, 4)
+        bribingQueue(a) shouldBe 3
+      }
+      it("notify of an unbribable queue") {
+        val a = Array(2, 5, 1, 3, 4)
+        assertThrows[IllegalStateException] {
+          bribingQueue(a)
+        }
       }
     }
   }
