@@ -29,7 +29,7 @@ lazy val dataStructures = Project(
   .settings(Seq(
     Keys.name := "data-structures",
     Keys.description := "Implementations of common data structures",
-    Keys.libraryDependencies := commonDependencies
+    Keys.libraryDependencies ++= commonDependencies
   ) ++ Settings.commonSettings)
 
 lazy val algorithms = Project(
@@ -40,7 +40,7 @@ lazy val algorithms = Project(
   .settings(Seq(
     Keys.name := "algorithms",
     Keys.description := "Implementations of algorithms",
-    Keys.libraryDependencies := commonDependencies
+    Keys.libraryDependencies ++= commonDependencies
   ) ++ Settings.commonSettings)
 
 lazy val tools = Project(
@@ -50,5 +50,5 @@ lazy val tools = Project(
   .settings(Seq(
     Keys.name := "tools",
     Keys.description := "Tools to share between projects",
-    Keys.libraryDependencies := testDependencies
+    Keys.libraryDependencies ++= commonDependencies ++ testDependencies
   ) ++ Settings.commonSettings)
