@@ -1,8 +1,8 @@
 package com.scalaprojects.datastructures.linkedlists
 
-import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
+import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
-class LinkedListsTest extends FunSpec with Matchers with SeveredStackTraces {
+class LinkedListsTest extends ScalaProjectsSpec {
   describe("Singly linked lists") {
     it("should create from values") {
       val sll = SinglyLinkedList(List(1, 2, 3))

@@ -1,8 +1,8 @@
 package com.scalaprojects.datastructures.linkedlists
 
-import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
+import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
-class LinkedListIterableTest extends FunSpec with Matchers with SeveredStackTraces {
+class LinkedListIterableTest extends ScalaProjectsSpec {
   describe("iterable linked lists") {
     it("should iterate forward") {
       // Set up a generic linked list for testing
