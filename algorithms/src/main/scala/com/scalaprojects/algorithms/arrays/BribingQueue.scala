@@ -19,8 +19,9 @@ object BribingQueue {
           // Swap the current value and the previous value to achieve the expected configuration (1 unbribe)
           SwapItems.swap(q, i, i - 1)
           bribes += 1
+        }
         // If we're still in the range of the array and the previous previous value is equal to the current expected value (it has bribed 2 up)
-        } else if (i - 2 >= 0 && q(i - 2) == (i + 1)) {
+        else if (i - 2 >= 0 && q(i - 2) == (i + 1)) {
           // Unbribe the value at i - 2
           // Shift the current value and i - 1 value down 1. Then set the i value to the i - 2 value
           q(i - 2) = q(i - 1)
