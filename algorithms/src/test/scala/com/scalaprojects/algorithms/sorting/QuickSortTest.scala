@@ -1,8 +1,8 @@
 package com.scalaprojects.algorithms.sorting
 
-import org.scalatest.{ FunSpec, Matchers, SeveredStackTraces }
+import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
-class QuickSortTest extends FunSpec with Matchers with SeveredStackTraces {
+class QuickSortTest extends ScalaProjectsSpec {
 
   import com.scalaprojects.algorithms.sorting.QuickSort._
 
