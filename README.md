@@ -5,6 +5,8 @@
 ## Data Structures
 * Linked Lists
   - [Singly Linked List](data-structures/src/main/scala/com/scalaprojects/datastructures/linkedlists/SinglyLinkedList.scala)
+* Scala Collections (_Simplified implementations of the scala.collections library_)
+  - [Queue](data-structures/src/main/scala/com/scalaprojects/datastructures/collections/Queue.scala)
 ## Algorithms
 * Arrays
   - [Find adjacent pairs which sum to n](algorithms/src/main/scala/com/scalaprojects/algorithms/arrays/FindAdjacentPairsWhichSumToN.scala)
