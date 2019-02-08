@@ -9,18 +9,19 @@ object BribingQueue {
    * @param q the array of ascending integers
    */
   def bribingQueue(q: Array[Int]): Int = {
+    // q may come in as an array of 1 - n. If this happens, it is annoying so just increment each by 1 and do the calculation. Makes indexing easier
     var bribes = 0
     for (i <- q.indices.reverse) {
       // If we see a bribee (expected value not equal to actual value in array), see how many times he has been bribed
-      if (q(i) != i + 1) {
+      if (q(i) != i) {
         // If we're still in the range of the array and the previous value is equal to the current expected value (it has bribed 1 up)
-        if ((i - 1) >= 0 && q(i - 1) == (i + 1)) {
+        if ((i - 1) >= 0 && q(i - 1) == i) {
           // Unbribe the value at i - 1
           // Swap the current value and the previous value to achieve the expected configuration (1 unbribe)
           SwapItems.swap(q, i, i - 1)
           bribes += 1
         } // If we're still in the range of the array and the previous previous value is equal to the current expected value (it has bribed 2 up)
-        else if (i - 2 >= 0 && q(i - 2) == (i + 1)) {
+        else if (i - 2 >= 0 && q(i - 2) == i) {
           // Unbribe the value at i - 2
           // Shift the current value and i - 1 value down 1. Then set the i value to the i - 2 value
           q(i - 2) = q(i - 1)
