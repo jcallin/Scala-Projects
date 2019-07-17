@@ -14,8 +14,6 @@ cache:
     - $HOME/.ivy2/cache
     - $HOME/.sbt/boot/
 
-jdk: oraclejdk8
-
 script:
   - sbt ++$TRAVIS_SCALA_VERSION clean coverage test coverageReport && sbt coverageAggregate
 after_success:
