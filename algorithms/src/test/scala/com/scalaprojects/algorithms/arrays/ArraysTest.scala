@@ -96,11 +96,11 @@ class ArraysTest extends ScalaProjectsSpec {
     }
     describe("when evaluating a bribing queue") {
       it("should identify the number of bribes for a bribable queue") {
-        val a = Array(2, 1, 5, 3, 4)
+        val a = Array(1, 0, 4, 2, 3)
         bribingQueue(a) shouldBe 3
       }
       it("notify of an unbribable queue") {
-        val a = Array(2, 5, 1, 3, 4)
+        val a = Array(1, 4, 0, 2, 3)
         assertThrows[IllegalStateException] {
           bribingQueue(a)
         }
