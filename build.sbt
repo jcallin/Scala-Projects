@@ -2,19 +2,19 @@ name := "Scala-projects"
 
 version in ThisBuild := "1.0-SNAPSHOT"
 
-scalaVersion in ThisBuild := "2.13.0-M1"
+scalaVersion in ThisBuild := "2.13.0"
 
 scalacOptions in ThisBuild += "-deprecation"
 
 val commonDependencies = Seq(
-  "org.scalactic" %% "scalactic" % "3.0.3",
-  "org.scala-lang.modules" %% "scala-java8-compat" % "0.8.0",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2"
+  "org.scalactic" %% "scalactic" % "3.0.8",
+  "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.0",
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
 )
 
 val testDependencies = Seq(
-  "org.scalatest" %% "scalatest" % "3.0.3",
-  "org.scalamock" %% "scalamock" % "4.0.0"
+  "org.scalatest" %% "scalatest" % "3.0.8",
+  "org.scalamock" %% "scalamock" % "4.3.0"
 )
 
 lazy val root = (project in file("."))

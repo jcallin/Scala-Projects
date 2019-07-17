@@ -19,7 +19,7 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
 
 // Scala compiler unitest coverage plugin
 // https://github.com/scoverage/sbt-scoverage
-addSbtPlugin("org.scoverage" %% "sbt-scoverage" % "1.6.0-M1")
+addSbtPlugin("org.scoverage" %% "sbt-scoverage" % "1.6.0")
 
 // Scala docs plugins
 
