@@ -22,7 +22,7 @@ object ReverseArrayRecursive {
           // Must expand and use single parameter to initialize array
           // because Array[T]'s constructor is Array(x: T*)
           // If it were an Array[Int] we could use Array(x: Int, xs: Int*)
-          reverseArrayHelper(Seq(rest).toArray, ArraySeq.unsafeWrapArray(Seq(head).toArray).toArray ++ acc)
+          reverseArrayHelper(rest.toArray, ArraySeq.unsafeWrapArray(Seq(head).toArray).toArray ++ acc)
       }
     }
 
