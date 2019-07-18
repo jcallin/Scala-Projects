@@ -50,5 +50,9 @@ class QueueTest extends ScalaProjectsSpec {
         op => assertThrows[NoSuchElementException] (op())
       )
     }
+
+    it("should get a queue's length") {
+      q.length shouldBe 2
+    }
   }
 }
