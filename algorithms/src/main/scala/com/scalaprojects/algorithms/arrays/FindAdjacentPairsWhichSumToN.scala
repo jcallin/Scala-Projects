@@ -34,16 +34,16 @@ object FindAdjacentPairsWhichSumToN {
       }
     }
 
-    def addToAcc(sum: Int, i1: Int, i2: Int): List[IntPair] = {
-      if (checkSumIs(sum, i1, i2)) {
-        List((i1, i2))
+    def addToAcc(sum: Int, addend1: Int, addend2: Int): List[IntPair] = {
+      if (checkSumIs(sum, addend1, addend2)) {
+        List((addend1, addend2))
       } else {
         Nil
       }
     }
 
-    def checkSumIs(sum: Int, i1: Int, i2: Int): Boolean = {
-      i1 + i2 == sum
+    def checkSumIs(sum: Int, addend1: Int, addend2: Int): Boolean = {
+      addend1 + addend2 == sum
     }
 
     findAdjacentPairsWhoseSumIsHelper(a, sum, List.empty[IntPair])

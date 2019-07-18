@@ -16,6 +16,7 @@ class LinkedListIterableTest extends ScalaProjectsSpec {
       val ill = new LinkedListIterable(Some(testHead))
       ill.next.get.value shouldBe 0
       ill.next.get.value shouldBe 1
+      ill.next shouldBe None
     }
   }
 }

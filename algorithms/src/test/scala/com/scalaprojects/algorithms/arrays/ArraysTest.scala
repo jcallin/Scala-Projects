@@ -75,11 +75,19 @@ class ArraysTest extends ScalaProjectsSpec {
         val a = List(0, 5, 1, 4, 2, 3, 5)
         findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((0, 5), (1, 4), (2, 3), (5, 0))
       }
+      it("should determine for a non-empty single-item list") {
+        val a = List(5)
+        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((5, 0))
+      }
     }
     describe("when swapping 2 elements of an array") {
       it("should swap 2 elements of a non-empty array") {
         val a = Array(1, 2, 3, 4, 5)
         swap(a, 1, 4) shouldBe Array(1, 5, 3, 4, 2)
+      }
+      it("should swap elements of an empty array") {
+        val a = Array.empty[Int]
+        swap(a, 0, 0) shouldBe Array.empty[Int]
       }
     }
     describe("when rotating an array to the left") {
