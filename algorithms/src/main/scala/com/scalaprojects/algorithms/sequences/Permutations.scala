@@ -2,12 +2,13 @@ package com.scalaprojects.algorithms.sequences
 
 object Permutations {
   type Permutation[T] = List[T]
+  type Permutations[T] = List[Permutation[T]]
   /**
    * Return all permutations of a given sequence
    *
    */
-  def allPermutationsOf[T](sequence: List[T]): List[List[T]] = {
-    def allPermutationsOfHelper(seq: List[T], acc: List[List[T]]): List[List[T]] = {
+  def allPermutationsOf[T](sequence: List[T]): Permutations[T] = {
+    def allPermutationsOfHelper(seq: List[T], acc: Permutations[T]): Permutations[T] = {
       seq match {
         case Nil => acc
         case head :: Nil => List(head) :: acc
@@ -22,6 +23,6 @@ object Permutations {
           }
       }
     }
-    allPermutationsOfHelper(sequence, List.empty[List[T]])
+    allPermutationsOfHelper(sequence, List.empty[Permutation[T]])
   }
 }
