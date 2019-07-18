@@ -17,8 +17,7 @@ object MergeSort {
       a
     } else {
       // Split the array in half
-      val left: Array[Int] = Array(a.splitAt(a.length / 2)._1: _*)
-      val right: Array[Int] = Array(a.splitAt(a.length / 2)._2: _*)
+      val (left, right) = a.splitAt(a.length / 2)
       // Sort the left and right half
       mergeSort(left)
       mergeSort(right)
