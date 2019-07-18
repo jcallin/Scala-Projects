@@ -12,8 +12,11 @@ class PermutationsTest extends ScalaProjectsSpec {
         List(2, 3, 1),
         List(1, 3, 2),
         List(3, 1, 2),
-        List(3, 2, 1)
-      )
+        List(3, 2, 1))
+    }
+    it("should cover empty list and single item list") {
+      allPermutationsOf(List.empty[Int]) shouldBe List.empty[List[Int]]
+      allPermutationsOf(List(0)) shouldBe List(List(0))
     }
   }
 
