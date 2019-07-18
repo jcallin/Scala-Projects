@@ -19,6 +19,7 @@
   - [Right rotation](algorithms/src/main/scala/com/scalaprojects/algorithms/arrays/Rotation.scala)
   - [Bribing queue](algorithms/src/main/scala/com/scalaprojects/algorithms/arrays/BribingQueue.scala)
 * Sequences
+  - [All Permutations of a List](algorithms/src/main/scala/com/scalaprojects/algorithms/sequences/Permutations.scala)
   - [Fibonacci with tail recursion](algorithms/src/main/scala/com/scalaprojects/algorithms/sequences/FibonacciRecursive.scala)
   - [Fibonacci with streams](algorithms/src/main/scala/com/scalaprojects/algorithms/sequences/FibonacciStreams.scala)
 * Sorting
