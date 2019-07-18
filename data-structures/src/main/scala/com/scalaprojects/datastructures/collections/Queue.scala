@@ -34,7 +34,7 @@ class Queue[A](val in: List[A], out: List[A]) extends AbstractSeq[A] {
     else throw new NoSuchElementException("tail on empty queue")
 
   // AbstractSeq methods
-  override def iterator: Iterator[A] = (out ::: in.reverse).toIterator
+  override def iterator: Iterator[A] = (out ::: in.reverse).iterator
   override def apply(idx: Int): A = {
     // If we can take from the out list
     if (idx < out.length) out.apply(idx)
