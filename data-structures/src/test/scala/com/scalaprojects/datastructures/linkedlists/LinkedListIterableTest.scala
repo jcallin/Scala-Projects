@@ -1,5 +1,6 @@
 package com.scalaprojects.datastructures.linkedlists
 
+import com.scalaprojects.datastructures.node.Node
 import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
 class LinkedListIterableTest extends ScalaProjectsSpec {

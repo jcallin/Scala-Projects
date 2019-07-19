@@ -1,4 +1,4 @@
-package com.scalaprojects.datastructures.linkedlists
+package com.scalaprojects.datastructures.node
 
 /** Primitive Nodes for Linked Lists */
 trait Node {
