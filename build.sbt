@@ -1,4 +1,4 @@
-name := "Scala-projects"
+name := "Scala-Projects"
 
 version in ThisBuild := "1.0-SNAPSHOT"
 
