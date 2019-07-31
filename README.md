@@ -6,7 +6,7 @@
 * Linked Lists
   - [Singly Linked List](data-structures/src/main/scala/com/scalaprojects/datastructures/linkedlists/SinglyLinkedList.scala)
 * Trees
-  - [Binary Tree](data-structures/src/main/scala/com/scalaprojects/datastructures/trees/BinaryTree.scala))
+  - [Binary Tree](data-structures/src/main/scala/com/scalaprojects/datastructures/trees/BinaryTree.scala)
 * Scala Collections (_Simplified implementations of the scala.collections library_)
   - [Queue](data-structures/src/main/scala/com/scalaprojects/datastructures/collections/Queue.scala)
 ## Algorithms
