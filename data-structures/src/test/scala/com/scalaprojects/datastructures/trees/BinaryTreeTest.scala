@@ -7,7 +7,7 @@ class BinaryTreeTest extends ScalaProjectsSpec {
   describe("Binary tree") {
     it("should build from a list of values") {
       val vals = List(0, 1, 2, 3, 4, 5)
-      BinaryTree.binaryTreeFromValues(vals) shouldBe
+      BinaryTree(vals) shouldBe
         Some(TreeNode(
           0,
           Some(TreeNode(
@@ -19,10 +19,10 @@ class BinaryTreeTest extends ScalaProjectsSpec {
     }
     it("should build from no items and a single item") {
       val empty = List.empty[Int]
-      BinaryTree.binaryTreeFromValues(empty) shouldBe None
+      BinaryTree(empty) shouldBe None
 
       val single = List(0)
-      BinaryTree.binaryTreeFromValues(single) shouldBe Some(TreeNode(0, None, None))
+      BinaryTree(single) shouldBe Some(TreeNode(0, None, None))
     }
   }
 
