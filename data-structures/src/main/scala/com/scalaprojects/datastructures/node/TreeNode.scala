@@ -1,3 +1,3 @@
 package com.scalaprojects.datastructures.node
 
-class TreeNode(left: Option[SingleNode], right: Option[SingleNode], override val value: AnyVal) extends Node
+case class TreeNode(override var value: AnyVal, var left: Option[TreeNode] = None, var right: Option[TreeNode] = None) extends MutableNode
