@@ -40,8 +40,8 @@ object BinaryTree {
                 parent.left = Some(leftChild)
                 queue = queue.enqueue(leftChild)
 
-              case Nil =>
-                queue = queue.enqueue(parent)
+              case e =>
+                sys.error(s"Encountered an error, rest of items to add were $e")
             }
         }
         root
