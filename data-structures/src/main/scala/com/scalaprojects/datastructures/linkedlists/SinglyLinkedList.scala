@@ -1,5 +1,7 @@
 package com.scalaprojects.datastructures.linkedlists
 
+import com.scalaprojects.datastructures.node.SingleNode
+
 import scala.annotation.tailrec
 
 case class SinglyLinkedList(head: Option[SingleNode]) extends LinkedListIterable(head)
