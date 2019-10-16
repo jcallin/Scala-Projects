@@ -12,6 +12,8 @@ class QuickSortTest extends ScalaProjectsSpec {
       quickSort(a) shouldBe a.sorted
       val b = Array(2, 7, 2, 4, 3)
       quickSort(b) shouldBe b.sorted
+      val c = Array(2)
+      quickSort(c) shouldBe c.sorted
     }
   }
 }
