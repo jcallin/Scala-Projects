@@ -2,6 +2,9 @@
 [![Build Status](https://travis-ci.org/jcallin/Scala-Projects.svg?branch=master)](https://travis-ci.org/jcallin/Scala-Projects)
 [![Coverage Status](https://coveralls.io/repos/github/jcallin/Scala-Projects/badge.svg?branch=master)](https://coveralls.io/github/jcallin/Scala-Projects?branch=master)
 
+## Design, learning, and exercises
+* [Boundaries: Designing a functional core with an imperative shell](exercises/src/main/scala/com/scalaprojects/exercises/boundaries/README.md) (adapted from [Gary Bernhardt's 2012 talk](https://www.youtube.com/watch?v=yTkzNHF6rMs))
+
 ## Data Structures
 * Linked Lists
   - [Singly Linked List](data-structures/src/main/scala/com/scalaprojects/datastructures/linkedlists/SinglyLinkedList.scala)

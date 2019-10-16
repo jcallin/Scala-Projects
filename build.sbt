@@ -18,7 +18,7 @@ val testDependencies = Seq(
 )
 
 lazy val root = (project in file("."))
-  .aggregate(tools, algorithms, dataStructures)
+  .aggregate(tools, algorithms, dataStructures, exercises)
   .settings(Settings.commonSettings)
 
 lazy val dataStructures = Project(
@@ -40,6 +40,17 @@ lazy val algorithms = Project(
   .settings(Seq(
     Keys.name := "algorithms",
     Keys.description := "Implementations of algorithms",
+    Keys.libraryDependencies ++= commonDependencies
+  ) ++ Settings.commonSettings)
+
+lazy val exercises = Project(
+  base = file("exercises"),
+  id = "exercises"
+)
+  .dependsOn(tools)
+  .settings(Seq(
+    Keys.name := "exercises",
+    Keys.description := "Exercises demonstrating various things in Scala",
     Keys.libraryDependencies ++= commonDependencies
   ) ++ Settings.commonSettings)
 
