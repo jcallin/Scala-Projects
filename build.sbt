@@ -43,6 +43,15 @@ lazy val algorithms = Project(
     Keys.libraryDependencies ++= commonDependencies
   ) ++ Settings.commonSettings)
 
+lazy val exercises = Project(
+  base = file("exercises"),
+  id = "exercises"
+).settings(Seq(
+  Keys.name := "exercises",
+  Keys.description := "Exercises demonstrating various things in Scala",
+  Keys.libraryDependencies ++= commonDependencies
+) ++ Settings.commonSettings)
+
 lazy val tools = Project(
   base = file("tools"),
   id = "tools"
