@@ -11,17 +11,8 @@ class LinkedListIterable(head: Option[SingleNode]) extends Iterator[Option[Singl
   override def hasNext: Boolean = nextNode.isDefined
 
   override def next: Option[SingleNode] = {
-    if (hasNext) {
-      // Return the current node
-      val ret = nextNode
-      // Step to the next node
-      nextNode = nextNode match {
-        case Some(node) => node.next
-        case _ => None
-      }
-      ret
-    } else {
-      None
-    }
+    val ret = nextNode
+    nextNode = nextNode.flatMap(_.next)
+    ret
   }
 }

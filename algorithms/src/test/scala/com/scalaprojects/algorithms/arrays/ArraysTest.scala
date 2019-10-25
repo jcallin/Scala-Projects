@@ -78,6 +78,8 @@ class ArraysTest extends ScalaProjectsSpec {
       it("should determine for a non-empty single-item list") {
         val a = List(5)
         findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((5, 0))
+        val b = List(2)
+        findAdjacentPairsWhoseSumIs(b, 5) shouldBe List.empty
       }
     }
     describe("when swapping 2 elements of an array") {
