@@ -3,6 +3,11 @@ import sbt._
 
 lazy val testSettings = Seq(
   testOptions in Test ++= Seq(
-    Tests.Argument(TestFrameworks.ScalaTest, "-oF", "-h", "target/scalatest-report")
+    Tests.Argument(
+      TestFrameworks.ScalaTest,
+      "-oF",
+      "-h",
+      "target/scalatest-report"
+    )
   )
 )

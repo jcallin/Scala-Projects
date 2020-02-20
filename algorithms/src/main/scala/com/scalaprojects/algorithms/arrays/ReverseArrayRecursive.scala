@@ -4,12 +4,13 @@ import scala.annotation.tailrec
 import scala.collection.immutable.ArraySeq
 
 object ReverseArrayRecursive {
+
   /**
-   * Return an array reversed by recursion
-   *
-   * @param a array to reverse
-   * @tparam T type of object in the array
-   */
+    * Return an array reversed by recursion
+    *
+    * @param a array to reverse
+    * @tparam T type of object in the array
+    */
   def reverseArrayRecursive[T: Manifest](a: Array[T]): Array[T] = {
     @tailrec
     def reverseArrayHelper(a: Array[T], acc: Array[T]): Array[T] = {
@@ -22,7 +23,10 @@ object ReverseArrayRecursive {
           // Must expand and use single parameter to initialize array
           // because Array[T]'s constructor is Array(x: T*)
           // If it were an Array[Int] we could use Array(x: Int, xs: Int*)
-          reverseArrayHelper(rest.toArray, ArraySeq.unsafeWrapArray(Seq(head).toArray).toArray ++ acc)
+          reverseArrayHelper(
+            rest.toArray,
+            ArraySeq.unsafeWrapArray(Seq(head).toArray).toArray ++ acc
+          )
       }
     }
 

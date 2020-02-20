@@ -24,13 +24,14 @@ class QueueTest extends ScalaProjectsSpec {
       enq.tail shouldBe Queue[Int](2, 3)
 
       // Dequeue from out
-      enq.dequeue shouldBe(1, Queue[Int](2, 3))
+      enq.dequeue shouldBe (1, Queue[Int](2, 3))
       // Dequeue from in
       val deq = inTestQ.dequeue
-      deq shouldBe(2, Queue[Int](1))
+      deq shouldBe (2, Queue[Int](1))
     }
     it("should retrieve items from in the queue") {
-      val retrieveTestQ = new Queue[Int](in = List(1, 2, 3), out = List(4, 5, 6))
+      val retrieveTestQ =
+        new Queue[Int](in = List(1, 2, 3), out = List(4, 5, 6))
       retrieveTestQ.apply(1) shouldBe 5
       retrieveTestQ.apply(3) shouldBe 3
       assertThrows[NoSuchElementException] {
@@ -43,12 +44,10 @@ class QueueTest extends ScalaProjectsSpec {
       lazy val exceptionOps = List(
         emptyq.dequeue _,
         emptyq.tail _,
-        emptyq.head _,
+        emptyq.head _
       )
 
-      exceptionOps.map(
-        op => assertThrows[NoSuchElementException] (op())
-      )
+      exceptionOps.map(op => assertThrows[NoSuchElementException](op()))
     }
 
     it("should get a queue's length") {

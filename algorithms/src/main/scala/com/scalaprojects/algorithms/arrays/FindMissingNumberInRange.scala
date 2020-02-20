@@ -1,11 +1,12 @@
 package com.scalaprojects.algorithms.arrays
 
 object FindMissingNumberInRange {
+
   /**
-   * Return the single missing number from an array of size n missing exactly 1 number in a sequence 1 to n
-   *
-   * @param a array to inspect
-   */
+    * Return the single missing number from an array of size n missing exactly 1 number in a sequence 1 to n
+    *
+    * @param a array to inspect
+    */
   def findMissingNumberIn(a: Array[Int]): Int = {
     if (a.isEmpty) {
       0

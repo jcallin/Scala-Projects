@@ -3,12 +3,12 @@ package com.scalaprojects.datastructures.collections
 import scala.collection.AbstractSeq
 
 /**
- * A simple implementation similar to [[scala.collection.immutable.Queue]]
- *
- * @param in list of items that have been inserted, with most recent insertion at head
- * @param out list queued items, with the next items to be removed at the head
- * @tparam A type of item in the queue
- */
+  * A simple implementation similar to [[scala.collection.immutable.Queue]]
+  *
+  * @param in list of items that have been inserted, with most recent insertion at head
+  * @param out list queued items, with the next items to be removed at the head
+  * @tparam A type of item in the queue
+  */
 class Queue[A](val in: List[A], out: List[A]) extends AbstractSeq[A] {
   def enqueue(item: A): Queue[A] = new Queue(item :: in, out)
   def dequeue: (A, Queue[A]) = {

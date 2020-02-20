@@ -1,16 +1,14 @@
 package com.scalaprojects.algorithms.arrays
 
-import com.scalaprojects.tools.testtools.ScalaProjectsSpec
-
+import com.scalaprojects.algorithms.arrays.BribingQueue.bribingQueue
 import com.scalaprojects.algorithms.arrays.FindAdjacentPairsWhichSumToN.findAdjacentPairsWhoseSumIs
 import com.scalaprojects.algorithms.arrays.FindMissingNumberInRange.findMissingNumberIn
 import com.scalaprojects.algorithms.arrays.RemoveDuplicates.removeDups
 import com.scalaprojects.algorithms.arrays.ReverseArrayIterative.reverseArrayIterative
 import com.scalaprojects.algorithms.arrays.ReverseArrayRecursive.reverseArrayRecursive
+import com.scalaprojects.algorithms.arrays.Rotation.{leftRotation, rightRotation}
 import com.scalaprojects.algorithms.arrays.SwapItems.swap
-import com.scalaprojects.algorithms.arrays.Rotation.leftRotation
-import com.scalaprojects.algorithms.arrays.Rotation.rightRotation
-import com.scalaprojects.algorithms.arrays.BribingQueue.bribingQueue
+import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
 class ArraysTest extends ScalaProjectsSpec {
   describe("array algorithms") {
@@ -56,7 +54,9 @@ class ArraysTest extends ScalaProjectsSpec {
         removeDups(a) shouldBe Array.empty[AnyVal]
       }
     }
-    describe("when finding the missing number in a sequential array of integers") {
+    describe(
+      "when finding the missing number in a sequential array of integers"
+    ) {
       it("should find the missing number in an array of size 9") {
         val a: Array[Int] = Array(1, 2, 3, 5, 6, 7, 8, 9, 10)
         findMissingNumberIn(a) shouldBe 4
@@ -69,11 +69,21 @@ class ArraysTest extends ScalaProjectsSpec {
     describe("when finding if all adjacent pairs in a list sum to a number") {
       it("should determine for a non-empty even list") {
         val a = List(0, 5, 1, 4, 2, 3, 4, 5)
-        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((0, 5), (1, 4), (2, 3), (5, 0))
+        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List(
+          (0, 5),
+          (1, 4),
+          (2, 3),
+          (5, 0)
+        )
       }
       it("should determine for a non-empty odd list") {
         val a = List(0, 5, 1, 4, 2, 3, 5)
-        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((0, 5), (1, 4), (2, 3), (5, 0))
+        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List(
+          (0, 5),
+          (1, 4),
+          (2, 3),
+          (5, 0)
+        )
       }
       it("should determine for a non-empty single-item list") {
         val a = List(5)

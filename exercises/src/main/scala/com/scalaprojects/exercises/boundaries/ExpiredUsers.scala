@@ -7,6 +7,8 @@ object ExpiredUsers {
 
   /** Return all users who are active and who have not paid for over a month before today */
   def forUsers(users: Seq[User]): List[User] = {
-    users.filter(user => user.active && user.paidAt.isBefore(paymentExpiration)).toList
+    users
+      .filter(user => user.active && user.paidAt.isBefore(paymentExpiration))
+      .toList
   }
 }
