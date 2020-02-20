@@ -8,12 +8,14 @@ class JsonTest extends ScalaProjectsSpec {
       import JsonWriterInstances._
 
       JsonInterface.toJson(Person("Dave", "dave@example.com"))
+      JsonInterface.toJson("""{"k1" = "v1"}""")
     }
     it("Provides a JSON serialization type class via interface syntax") {
       import JsonSyntax._
       import JsonWriterInstances._
 
       Person("Dave", "dave@example.com").toJson
+      """{"k1" = "v1"}""".toJson
     }
   }
 }

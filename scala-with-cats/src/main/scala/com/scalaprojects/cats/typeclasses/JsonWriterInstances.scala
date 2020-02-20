@@ -13,22 +13,19 @@ object JsonWriterInstances {
   implicit val personWriter: JsonWriter[Person] =
     new JsonWriter[Person] {
       def write(value: Person): Json =
-        JsObject(
-          Map("name" -> JsString(value.name), "email" -> JsString(value.email))
-        )
+        JsObject(Map("name" -> JsString(value.name), "email" -> JsString(value.email)))
     }
 
   // etc...
 }
 
-object JsonWriterInstancesSimplified {
-  implicit val stringWriter: JsonWriter[String] =
-    (value: String) => JsString(value)
-  implicit val personWriter: JsonWriter[Person] =
-    (value: Person) =>
-      JsObject(
-        Map("name" -> JsString(value.name), "email" -> JsString(value.email))
-      )
-
-  // etc...
-}
+//object JsonWriterInstancesSimplified {
+//  implicit val stringWriter: JsonWriter[String] =
+//    (value: String) => JsString(value)
+//  implicit val personWriter: JsonWriter[Person] =
+//    (value: Person) =>
+//      JsObject(
+//        Map("name" -> JsString(value.name), "email" -> JsString(value.email)))
+//
+//  // etc...
+//}
