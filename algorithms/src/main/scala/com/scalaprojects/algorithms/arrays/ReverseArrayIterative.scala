@@ -1,12 +1,13 @@
 package com.scalaprojects.algorithms.arrays
 
 object ReverseArrayIterative {
+
   /**
-   * Return an array reversed by iteration
-   *
-   * @param a array to reverse
-   * @tparam T type of object in the array
-   */
+    * Return an array reversed by iteration
+    *
+    * @param a array to reverse
+    * @tparam T type of object in the array
+    */
   def reverseArrayIterative[T](a: Array[T]): Array[T] = {
     // Set up bounds
     val start = 0

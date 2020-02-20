@@ -11,4 +11,3 @@ object Configurations {
     .setPreference(FirstArgumentOnNewline, Preserve)
     .setPreference(FirstParameterOnNewline, Preserve)
 }
-

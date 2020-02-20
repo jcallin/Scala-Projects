@@ -3,14 +3,15 @@ package com.scalaprojects.algorithms.sorting
 import com.scalaprojects.algorithms.arrays.SwapItems.swap
 
 object QuickSort {
+
   /**
-   * Sort an array by quicksort
-   * Time:  worst:   n2 (randomize partition index for nlogn average)
-   *        average: nlogn
-   *        best:    n
-   * Space:          n (in place)
-   * @param a array to sort
-   */
+    * Sort an array by quicksort
+    * Time:  worst:   n2 (randomize partition index for nlogn average)
+    *        average: nlogn
+    *        best:    n
+    * Space:          n (in place)
+    * @param a array to sort
+    */
   def quickSort(a: Array[Int]): Array[Int] = {
     def quickSortHelper(a: Array[Int], start: Int, end: Int): Array[Int] = {
       if (start < end) {
@@ -25,13 +26,13 @@ object QuickSort {
     }
 
     /**
-     * Return an array with a section partitioned around that section's last value
-     * The last value takes a spot in the array such that elements to its left are smaller and elements to its right are larger
-     * Elements in the array are swapped to achieve the above condition
-     * @param a array to partition
-     * @param start the start index of the section to partition
-     * @param end the end index of the section to partition
-     */
+      * Return an array with a section partitioned around that section's last value
+      * The last value takes a spot in the array such that elements to its left are smaller and elements to its right are larger
+      * Elements in the array are swapped to achieve the above condition
+      * @param a array to partition
+      * @param start the start index of the section to partition
+      * @param end the end index of the section to partition
+      */
     def partition(a: Array[Int], start: Int, end: Int): Int = {
       val pivotValue = a(end)
 

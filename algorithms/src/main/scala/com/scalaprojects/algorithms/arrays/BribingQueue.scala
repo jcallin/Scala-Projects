@@ -1,13 +1,14 @@
 package com.scalaprojects.algorithms.arrays
 
 object BribingQueue {
+
   /**
-   * Return the number of bribes needed to get to the input configuration. If not possible, raise an exception
-   * An array of ascending integers from 0 to n. A larger integer may bribe a smaller integer directly in front of them to swap spots in line
-   * Any integer may only bribe twice, but may be bribed any number of times
-   *
-   * @param q the array of ascending integers
-   */
+    * Return the number of bribes needed to get to the input configuration. If not possible, raise an exception
+    * An array of ascending integers from 0 to n. A larger integer may bribe a smaller integer directly in front of them to swap spots in line
+    * Any integer may only bribe twice, but may be bribed any number of times
+    *
+    * @param q the array of ascending integers
+    */
   def bribingQueue(q: Array[Int]): Int = {
     // q may come in as an array of 1 - n. If this happens, it is annoying so just increment each by 1 and do the calculation. Makes indexing easier
     var bribes = 0

@@ -1,16 +1,17 @@
 package com.scalaprojects.algorithms.sorting
 
 object MergeSort {
+
   /**
-   * Sort an array by mergesort
-   * Stable:         yes
-   * Time:  worst:   nlogn
-   * average:        nlogn
-   * best:           nlogn
-   * Space:          n - need 2 subarray size (n / 2) for each array
-   *
-   * @param a array to sort
-   */
+    * Sort an array by mergesort
+    * Stable:         yes
+    * Time:  worst:   nlogn
+    * average:        nlogn
+    * best:           nlogn
+    * Space:          n - need 2 subarray size (n / 2) for each array
+    *
+    * @param a array to sort
+    */
   def mergeSort(a: Array[Int]): Array[Int] = {
     // We know an array of length 1 is sorted
     if (a.length < 2) {
@@ -27,12 +28,12 @@ object MergeSort {
   }
 
   /**
-   * Merge 2 sorted arrays into a third array, replacing its values with sorted values from the other 2
-   *
-   * @param l one array
-   * @param r another array
-   * @param a third array to merge to
-   */
+    * Merge 2 sorted arrays into a third array, replacing its values with sorted values from the other 2
+    *
+    * @param l one array
+    * @param r another array
+    * @param a third array to merge to
+    */
   def merge(l: Array[Int], r: Array[Int], a: Array[Int]): Array[Int] = {
     // i indexes l
     // j indexes r

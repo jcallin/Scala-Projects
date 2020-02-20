@@ -3,11 +3,12 @@ package com.scalaprojects.algorithms.sequences
 import scala.annotation.tailrec
 
 object FibonacciRecursive {
+
   /**
-   * Return the nth fibonacci number using recursion
-   *
-   * @param n the fibonacci number to calculate
-   */
+    * Return the nth fibonacci number using recursion
+    *
+    * @param n the fibonacci number to calculate
+    */
   def fibRecursive(n: Int): Int = {
     @tailrec
     def fibHelper(prev: Int, cur: Int, n: Int): Int = {
@@ -21,4 +22,3 @@ object FibonacciRecursive {
     fibHelper(0, 1, n)
   }
 }
-
