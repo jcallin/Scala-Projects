@@ -3,19 +3,35 @@ package com.scalaprojects.cats.typeclasses
 import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
 class JsonTest extends ScalaProjectsSpec {
-  describe("the json write interface") {
-    it("Provides a JSON serialization type class via an interface object") {
+  describe("the json write interface provides a JSON serialization type class") {
+    val simpleJsonString = """{"k1" = "v1"}"""
+    val simpleJson = JsString(simpleJsonString)
+
+    val simpleJsonPerson = Person("Dave", "dave@example.com")
+    val simpleJsonPersonObject = JsObject(
+      Map(
+        "name" -> JsString("Dave"),
+        "email" -> JsString("dave@example.com")
+      )
+    )
+
+    it("via an interface object") {
       import JsonWriterInstances._
 
-      JsonInterface.toJson(Person("Dave", "dave@example.com"))
-      JsonInterface.toJson("""{"k1" = "v1"}""")
+      JsonInterface.toJson(simpleJsonString) shouldBe simpleJson
+      JsonInterface.toJson(simpleJsonPerson) shouldBe simpleJsonPersonObject
     }
-    it("Provides a JSON serialization type class via interface syntax") {
+    it("via interface syntax") {
       import JsonSyntax._
       import JsonWriterInstances._
 
       Person("Dave", "dave@example.com").toJson
-      """{"k1" = "v1"}""".toJson
+      simpleJsonString.toJson shouldBe simpleJson
+    }
+    it("for Option[A] types") {
+      import JsonWriterInstances._
+
+      JsonInterface.toJson(Option(simpleJsonString)) shouldBe simpleJson
     }
   }
 }
