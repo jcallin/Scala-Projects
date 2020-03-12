@@ -1,6 +1,6 @@
 package com.scalaprojects.exercises.boundaries
 
-import java.time.{LocalDate, LocalDateTime}
+import java.time.{ LocalDate, LocalDateTime }
 
 trait UserDatabaseTestData {
   val someExpiredTime = LocalDate.now().minusMonths(2).atTime(0, 0)

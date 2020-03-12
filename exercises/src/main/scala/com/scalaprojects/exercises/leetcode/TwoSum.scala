@@ -23,7 +23,7 @@ object TwoSum {
     // Take all defined options
     // Only one solution should exist
     result.flatten.headOption
-    // If no solution exists, error
+      // If no solution exists, error
       .getOrElse(throw new IllegalArgumentException("No solution exists"))
   }
 }

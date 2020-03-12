@@ -7,10 +7,10 @@ class UserDatabase(val users: List[User] = List.empty) extends StrictLogging {
     users.map(user => user -> List.empty[String]).toMap
 
   /**
-    * Mail a message to a user
-    * @param user to mail to
-    * @param message to mail, will be in user's inbox
-    */
+   * Mail a message to a user
+   * @param user to mail to
+   * @param message to mail, will be in user's inbox
+   */
   def mailTo(user: User, message: String): Boolean = {
     if (!users.contains(user)) {
       logger.warn(s"No user ${user.name} exists to mail to")
