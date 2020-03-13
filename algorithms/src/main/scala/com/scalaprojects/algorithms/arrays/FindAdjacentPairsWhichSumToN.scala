@@ -35,11 +35,7 @@ object FindAdjacentPairsWhichSumToN {
         // With 2 items and the rest, add the 2 to the acc if they add, and find the rest
         case head :: next :: tail =>
           val toAdd = addToAcc(sum, head, next)
-          findAdjacentPairsWhoseSumIsHelper(
-            List(next) ++ tail,
-            sum,
-            acc ++ toAdd
-          )
+          findAdjacentPairsWhoseSumIsHelper(List(next) ++ tail, sum, acc ++ toAdd)
       }
     }
 

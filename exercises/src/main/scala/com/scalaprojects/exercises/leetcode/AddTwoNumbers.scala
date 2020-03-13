@@ -1,17 +1,17 @@
 package com.scalaprojects.exercises.leetcode
 
 /**
- * Definition for singly-linked list.
- *
- */
+  * Definition for singly-linked list.
+  *
+  */
 object AddTwoNumbers {
 
   case class ListNode(x: Int = 0, var next: Option[ListNode] = None) {
 
     /**
-     * Useful for seeing full list and don't want to implement equals
-     * use this to check equals between the 2 output strings
-     */
+      * Useful for seeing full list and don't want to implement equals
+      * use this to check equals between the 2 output strings
+      */
     override def toString: String = {
       def toStringHelper(l: ListNode): String = {
         l.next
@@ -29,7 +29,7 @@ object AddTwoNumbers {
 
   private def addTwoNumbersHelper(l1: Option[ListNode], l2: Option[ListNode]): Option[ListNode] = {
     (l1, l2) match {
-      case (None, None) => None
+      case (None, None)            => None
       case (Some(l1Defined), None) => Some(l1Defined)
       case (None, Some(l2Defined)) => Some(l2Defined)
 
@@ -43,7 +43,8 @@ object AddTwoNumbers {
           val answerNode = ListNode(sum - 10)
           answerNode.next = addTwoNumbersHelper(
             Some(ListNode(1)),
-            addTwoNumbersHelper(l1Defined.next, l2Defined.next))
+            addTwoNumbersHelper(l1Defined.next, l2Defined.next)
+          )
           Some(answerNode)
         }
       }

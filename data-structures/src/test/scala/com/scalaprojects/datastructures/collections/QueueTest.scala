@@ -41,11 +41,7 @@ class QueueTest extends ScalaProjectsSpec {
 
     it("should throw exceptions on empty queue") {
       val emptyq = new Queue[Int](Nil, Nil)
-      lazy val exceptionOps = List(
-        emptyq.dequeue _,
-        emptyq.tail _,
-        emptyq.head _
-      )
+      lazy val exceptionOps = List(emptyq.dequeue _, emptyq.tail _, emptyq.head _)
 
       exceptionOps.map(op => assertThrows[NoSuchElementException](op()))
     }
