@@ -8,7 +8,7 @@
 * [Boundaries: Designing a functional core with an imperative shell](exercises/src/main/scala/com/scalaprojects/exercises/boundaries) (adapted from [Gary Bernhardt's 2012 talk](https://www.youtube.com/watch?v=yTkzNHF6rMs))
 
 ### Leetcode problems
-* [All problems solved and explanations found here](exercises/src/main/scala/com/scalaprojects/leetcode)
+* [All problems solved and explanations found here](exercises/src/main/scala/com/scalaprojects/exercises/leetcode)
 
 ## Data Structures
 * Linked Lists
