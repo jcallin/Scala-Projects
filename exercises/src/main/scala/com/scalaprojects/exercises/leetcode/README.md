@@ -47,4 +47,17 @@
             * Set the tracker to the index where it was first seen, the longest substring may continue from the character after where it was first seen
             * Clear the map and increment the tracker
         * Make sure to track the length of the longest substring in an int variable and replace the length when it gets longer
-    
+
+* [Container with Most Water](https://leetcode.com/problems/container-with-most-water/) 
+    * Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+      
+      Note: You may not slant the container and n is at least 2.
+      
+      In plain English, you are trying to maximize the area contained between 2 bars in a bar chart using the x-axis as the width, and the height of the lowest bar as the height. Which 2 bars create the container of maximum area?
+      #### Example: 
+      See unit tests
+      
+      #### Explanation:
+      * Start with the container of maximum width
+      * Look at the next bar inward from the shorter bar and check if new container area is greater than the max seen
+      * Continue until you are checking bars directly next to each other
