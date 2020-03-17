@@ -61,3 +61,27 @@
       * Start with the container of maximum width
       * Look at the next bar inward from the shorter bar and check if new container area is greater than the max seen
       * Continue until you are checking bars directly next to each other
+      
+* [Convert a Sorted Array to a Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+    * Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+      
+      For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+    
+      #### Example:
+      Given the sorted array: [-10, -3, 0, 5, 9],
+      
+      One possible answer is: [0, -3, 9, -10, null, 5], which represents the following height balanced BST:
+      
+      ```
+            0
+           / \
+         -3   9
+         /   /
+       -10  5
+      ```
+      
+      #### Explanation:
+      * A sorted array is the same thing as an in-order traversal of a binary search tree
+      * We know binary search trees have their mid value at the root, so an in-order traversal should give us the mid value at the middle of the array as well
+      * The left and right subtrees can be constructed from the values on each side of the mid value of the array in a similar way as the full array
+      * Luckily, this tree comes out height-balanced because there are an equal number of values in the array on each side of the first mid value
