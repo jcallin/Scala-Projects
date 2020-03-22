@@ -85,3 +85,40 @@
       * We know binary search trees have their mid value at the root, so an in-order traversal should give us the mid value at the middle of the array as well
       * The left and right subtrees can be constructed from the values on each side of the mid value of the array in a similar way as the full array
       * Luckily, this tree comes out height-balanced because there are an equal number of values in the array on each side of the first mid value
+      
+* [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+    * Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+      
+      #### Example:
+      This binary tree is symmetric:
+      ```
+               1
+            /     \
+           2       2
+          / \     / \
+         3   4   4   3
+        /|  /|   |\  |\
+       5 6 5 6   6 5 6 5 
+      ```
+      
+      But the following is not:
+      ```
+          1
+         / \
+        2   2
+         \   \
+         3    3
+      ```
+      
+      #### Explanation:
+      * Need to check if all subtrees off the root are symmetric
+      * 2 children tree are symmetric
+        * L child and their sibling's R child are roots of symmetric trees
+        * R child and their sibling's L child are roots of symmetric trees
+      * First check if both the roots are null, if they are the trees are obviously symmetric (null tree is symmetric with null tree)
+      * Then check if either of the roots is null, but not both (XOR). If so, the trees are asymmetric
+      * Finally check if the values or the roots are the same
+      * 2 recursive calls to `isSymmetric` with root1.left/root2.right, root1.right/root2.left. Place an `&&` between these calls because we need them both to be symmetric for the whole tree to be
+      
+      
+      
