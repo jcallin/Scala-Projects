@@ -120,5 +120,33 @@
       * Finally check if the values or the roots are the same
       * 2 recursive calls to `isSymmetric` with root1.left/root2.right, root1.right/root2.left. Place an `&&` between these calls because we need them both to be symmetric for the whole tree to be
       
+* [Flip Equivalent Binary Trees](https://leetcode.com/problems/flip-equivalent-binary-trees/) 
+    * For a binary tree T, we can define a flip operation as follows: choose any node, and swap the left and right child subtrees.
+    
+    A binary tree X is flip equivalent to a binary tree Y if and only if we can make X equal to Y after some number of flip operations.
       
-      
+     #### Example:
+     We flipped at nodes with values 1, 3, and 5.
+     ![Example](https://assets.leetcode.com/uploads/2018/11/29/tree_ex.png)
+     
+     #### Explanation:
+     * Similar to symmetric trees above
+     * 4 recursive calls
+     * 2 trees are only FEQ if
+        * R1's L tree is FEQ with either the L or R tree of R2 (2 calls)
+        * AND
+        * R2's L tree is FEQ with either the L or R tree of R1 (2 calls)
+        * This can be expressed as 
+        ```
+        FEQ(R1L, R2L) || FEQ(R1L, R2R)
+       
+        &&
+       
+        FEQ(R1R, R2L) || FEQ(R1R, R2R)
+        ```
+     * Base cases are
+        * Each root is `null` (true)
+        * One root is `null`, other is not (false)
+        * Each root is not null, but not equal (false)
+     
+     
