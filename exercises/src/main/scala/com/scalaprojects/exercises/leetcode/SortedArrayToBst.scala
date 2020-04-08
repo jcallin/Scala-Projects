@@ -1,12 +1,25 @@
 package com.scalaprojects.exercises.leetcode
 
 import com.scalaprojects.datastructures.node.TreeNode
-import com.scalaprojects.exercises.leetcode.datastructures.{BinaryTree, TreeNode => TreeNodeUnsafe}
+import com.scalaprojects.exercises.leetcode.datastructures.{TreeNode => TreeNodeUnsafe}
 
 object SortedArrayToBst {
 
   def sortedArrayToBstUnsafe(nums: Array[Int]): TreeNodeUnsafe = {
-    BinaryTree.fromArray(nums)
+    if (nums.isEmpty) {
+      null
+    } else if (nums.length == 1) {
+      TreeNodeUnsafe(nums.head)
+    } else {
+      val midpoint = nums.length / 2
+      val root = TreeNodeUnsafe(nums(midpoint))
+
+      val firstHalf = nums.take(midpoint)
+      val secondHalf = nums.drop(midpoint + 1)
+      root.left = sortedArrayToBstUnsafe(firstHalf)
+      root.right = sortedArrayToBstUnsafe(secondHalf)
+      root
+    }
   }
 
   def sortedArrayToBstIdiomatic(nums: Array[Int]): TreeNode = {
