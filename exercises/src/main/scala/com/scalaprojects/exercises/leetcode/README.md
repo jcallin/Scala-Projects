@@ -149,4 +149,18 @@
         * One root is `null`, other is not (false)
         * Each root is not null, but not equal (false)
      
-     
+* [Sum of nodes with even-valued grandparent](https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/)
+    * Given a binary tree, return the sum of values of nodes with even-valued grandparent.  (A grandparent of a node is the parent of its parent, if it exists.)
+      
+      If there are no nodes with an even-valued grandparent, return 0.
+      
+    #### Example:
+    ![Example](https://assets.leetcode.com/uploads/2019/07/24/1473_ex1.png)
+    
+    Output: 18
+    
+    #### Explanation:
+    * Need to tell all recursive calls whether they should add their children to their return sum depending on whether the current root is even/odd
+    * Calculate the value for each child
+        * Each child must be not-null and the flag for summing children must be true, else the child should be a 0
+    * Add the sums for each child (possibly 0 if not summing or they are null) to recursive calls using the subtrees ie `sumEvenGrandparentHelper(r.left, isEven)`
