@@ -1,4 +1,4 @@
-package com.scalaprojects.cats.typeclasses
+package com.scalaprojects.cats.typeclasses.json
 
 object JsonInterface {
   def toJson[A](value: A)(implicit w: JsonWriter[A]): Json =

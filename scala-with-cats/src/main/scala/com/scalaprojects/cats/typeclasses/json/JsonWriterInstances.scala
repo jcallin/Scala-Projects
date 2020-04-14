@@ -1,4 +1,4 @@
-package com.scalaprojects.cats.typeclasses
+package com.scalaprojects.cats.typeclasses.json
 
 // The type class instances
 
@@ -25,13 +25,12 @@ object JsonWriterInstances {
   // etc...
 }
 
-//object JsonWriterInstancesSimplified {
-//  implicit val stringWriter: JsonWriter[String] =
-//    (value: String) => JsString(value)
-//  implicit val personWriter: JsonWriter[Person] =
-//    (value: Person) =>
-//      JsObject(
-//        Map("name" -> JsString(value.name), "email" -> JsString(value.email)))
-//
-//  // etc...
-//}
+object JsonWriterInstancesSimplified {
+  implicit val stringWriter: JsonWriter[String] =
+    (value: String) => JsString(value)
+  implicit val personWriter: JsonWriter[Person] =
+    (value: Person) =>
+      JsObject(Map("name" -> JsString(value.name), "email" -> JsString(value.email)))
+
+  // etc...
+}

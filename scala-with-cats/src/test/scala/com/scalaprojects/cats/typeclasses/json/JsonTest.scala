@@ -1,4 +1,4 @@
-package com.scalaprojects.cats.typeclasses
+package com.scalaprojects.cats.typeclasses.json
 
 import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
@@ -16,20 +16,20 @@ class JsonTest extends ScalaProjectsSpec {
     )
 
     it("via an interface object") {
-      import JsonWriterInstances._
+      import com.scalaprojects.cats.typeclasses.json.JsonWriterInstances._
 
       JsonInterface.toJson(simpleJsonString) shouldBe simpleJson
       JsonInterface.toJson(simpleJsonPerson) shouldBe simpleJsonPersonObject
     }
     it("via interface syntax") {
-      import JsonSyntax._
-      import JsonWriterInstances._
+      import com.scalaprojects.cats.typeclasses.json.JsonSyntax._
+      import com.scalaprojects.cats.typeclasses.json.JsonWriterInstances._
 
       Person("Dave", "dave@example.com").toJson
       simpleJsonString.toJson shouldBe simpleJson
     }
     it("for Option[A] types") {
-      import JsonWriterInstances._
+      import com.scalaprojects.cats.typeclasses.json.JsonWriterInstances._
 
       JsonInterface.toJson(Option(simpleJsonString)) shouldBe simpleJson
     }
