@@ -1,6 +1,6 @@
 package com.scalaprojects.exercises.leetcode
 
-import com.scalaprojects.exercises.leetcode.SymmetricTree.TreeNode
+import com.scalaprojects.exercises.leetcode.datastructures.{BinaryTree, TreeNode}
 import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
 class SymmetricTreeTest extends ScalaProjectsSpec {
@@ -12,40 +12,27 @@ class SymmetricTreeTest extends ScalaProjectsSpec {
       SymmetricTree.isSymmetric(TreeNode(0)) shouldBe true
     }
     it("a tree with only 2 children") {
-      val input = TreeNode(0)
-      input.left = TreeNode(1)
-      input.right = TreeNode(1)
-      SymmetricTree.isSymmetric(input) shouldBe true
+      val tree = BinaryTree.fromArray(Array(0, 1, 1))
+      SymmetricTree.isSymmetric(tree) shouldBe true
     }
     it("a tree with a height greater than 2") {
-      val input = TreeNode(0)
-      val l = TreeNode(1)
-      val r = TreeNode(1)
-
-      l.left = TreeNode(2)
-      r.right = TreeNode(2)
-
-      l.right = TreeNode(3)
-      r.left = TreeNode(3)
-
-      input.left = l
-      input.right = r
-
-      SymmetricTree.isSymmetric(input) shouldBe true
-
+      val tree = BinaryTree.fromArray(Array(1, 2, 2, 3, 4, 4, 3))
+      SymmetricTree.isSymmetric(tree) shouldBe true
     }
   }
   describe("tells whether a tree is not symmetric") {
+    it("an regularly asymmetric tree") {
+      val tree = BinaryTree.fromArray(Array(1, 2, 2, null, 3, null, 3))
+      SymmetricTree.isSymmetric(tree) shouldBe false
+    }
     it("an almost symmetric tree where 2 values are different") {
-      val input = TreeNode(0)
-      input.left = TreeNode(1)
-      input.right = TreeNode(2)
-      SymmetricTree.isSymmetric(input) shouldBe false
+      val tree = BinaryTree.fromArray(Array(0, 1, 2))
+      SymmetricTree.isSymmetric(tree) shouldBe false
     }
     it("an asymmetric tree where whose two sides have different numbers of nodes") {
-      val input = TreeNode(0)
-      input.left = TreeNode(1)
-      SymmetricTree.isSymmetric(input) shouldBe false
+      val tree = BinaryTree.fromArray(Array(0, 1))
+      SymmetricTree.isSymmetric(tree) shouldBe false
     }
+
   }
 }
