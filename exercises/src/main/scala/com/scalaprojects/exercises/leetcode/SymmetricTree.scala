@@ -1,12 +1,8 @@
 package com.scalaprojects.exercises.leetcode
 
+import com.scalaprojects.exercises.leetcode.datastructures.TreeNode
+
 object SymmetricTree {
-
-  case class TreeNode(var value: Int) {
-    var left: TreeNode = null
-    var right: TreeNode = null
-  }
-
   def isSymmetric(root: TreeNode): Boolean = {
 
     def isSymmetricHelper(root1: TreeNode, root2: TreeNode): Boolean = {
