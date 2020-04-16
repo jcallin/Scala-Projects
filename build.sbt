@@ -8,7 +8,7 @@ scalacOptions in ThisBuild += "-deprecation"
 
 lazy val root = (project in file("."))
   .aggregate(tools, algorithms, dataStructures, exercises, scalaWithCats)
-  .settings(Settings.commonSettings)
+  .settings(Settings.rootSettings)
 lazy val dataStructures = Project(
   base = file("data-structures"),
   id = "data-structures"
