@@ -6,7 +6,7 @@ addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.3.2")
 // Scapegoat - static code analysis
 // https://github.com/sksamuel/sbt-scapegoat
 // todo: not compatible with scala 2.13
-//addSbtPlugin("com.sksamuel.scapegoat" %% "sbt-scapegoat" % "1.1.0")
+addSbtPlugin("com.sksamuel.scapegoat" %% "sbt-scapegoat" % "1.1.0")
 
 // Coveralls - integration with TravisCI for code coverage
 // https://github.com/scoverage/sbt-coveralls

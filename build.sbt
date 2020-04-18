@@ -6,6 +6,9 @@ scalaVersion in ThisBuild := "2.13.0"
 
 scalacOptions in ThisBuild += "-deprecation"
 
+scapegoatVersion in ThisBuild := "1.4.3"
+scapegoatDisabledInspections in ThisBuild := Seq("UnsafeTraversableMethods")
+
 lazy val root = (project in file("."))
   .aggregate(tools, algorithms, dataStructures, exercises, scalaWithCats)
   .settings(Settings.rootSettings)
