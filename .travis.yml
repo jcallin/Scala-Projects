@@ -18,7 +18,7 @@ cache:
     - $HOME/.sbt/boot/
 
 script:
-  - sbt ++$TRAVIS_SCALA_VERSION scalafmtCheckAll testAndCoverageReport
+  - sbt ++$TRAVIS_SCALA_VERSION scalafmtCheckAll scapegoat testAndCoverageReport
 after_success:
   - sbt coveralls
 
