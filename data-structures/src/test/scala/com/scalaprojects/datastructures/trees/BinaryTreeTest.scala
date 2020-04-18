@@ -12,13 +12,7 @@ class BinaryTreeTest extends ScalaProjectsSpec {
           Some(
             TreeNode(
               0,
-              Some(
-                TreeNode(
-                  1,
-                  Some(TreeNode(3, None, None)),
-                  Some(TreeNode(4, None, None))
-                )
-              ),
+              Some(TreeNode(1, Some(TreeNode(3, None, None)), Some(TreeNode(4, None, None)))),
               Some(TreeNode(2, Some(TreeNode(5, None, None)), None))
             )
           )

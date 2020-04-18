@@ -1,13 +1,12 @@
-// Static code style checkers
+// Code formatters and style checkers
 
-// Scalinform - automatic compilation time code formatter
-// https://github.com/sbt/sbt-scalariform
-addSbtPlugin("org.scalariform" %% "sbt-scalariform" % "1.8.2")
+// https://github.com/scalameta/sbt-scalafmt
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.3.2")
 
-//TODO add code analysis with scapegoat
 // Scapegoat - static code analysis
 // https://github.com/sksamuel/sbt-scapegoat
-//addSbtPlugin("com.sksamuel.scapegoat" %% "sbt-scapegoat" % "1.0.9")
+// todo: not compatible with scala 2.13
+//addSbtPlugin("com.sksamuel.scapegoat" %% "sbt-scapegoat" % "1.1.0")
 
 // Coveralls - integration with TravisCI for code coverage
 // https://github.com/scoverage/sbt-coveralls

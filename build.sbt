@@ -8,11 +8,11 @@ scalacOptions in ThisBuild += "-deprecation"
 
 lazy val root = (project in file("."))
   .aggregate(tools, algorithms, dataStructures, exercises, scalaWithCats)
-  .settings(Settings.commonSettings)
+  .settings(Settings.rootSettings)
 lazy val dataStructures = Project(
   base = file("data-structures"),
   id = "data-structures"
-).dependsOn(tools)
+).dependsOn(tools % Test)
   .settings(
     Seq(
       Keys.name := "data-structures",
@@ -23,7 +23,7 @@ lazy val dataStructures = Project(
 lazy val algorithms = Project(
   base = file("algorithms"),
   id = "algorithms"
-).dependsOn(tools)
+).dependsOn(tools % Test)
   .settings(
     Seq(
       Keys.name := "algorithms",
@@ -34,7 +34,7 @@ lazy val algorithms = Project(
 lazy val exercises = Project(
   base = file("exercises"),
   id = "exercises"
-).dependsOn(tools)
+).dependsOn(tools % Test, dataStructures)
   .settings(
     Seq(
       Keys.name := "exercises",
@@ -45,7 +45,7 @@ lazy val exercises = Project(
 lazy val scalaWithCats = Project(
   base = file("scala-with-cats"),
   id = "scala-with-cats"
-).dependsOn(tools)
+).dependsOn(tools % Test)
   .settings(
     Seq(
       Keys.name := "scala-with-cats",

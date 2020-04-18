@@ -54,9 +54,7 @@ class ArraysTest extends ScalaProjectsSpec {
         removeDups(a) shouldBe Array.empty[AnyVal]
       }
     }
-    describe(
-      "when finding the missing number in a sequential array of integers"
-    ) {
+    describe("when finding the missing number in a sequential array of integers") {
       it("should find the missing number in an array of size 9") {
         val a: Array[Int] = Array(1, 2, 3, 5, 6, 7, 8, 9, 10)
         findMissingNumberIn(a) shouldBe 4
@@ -69,21 +67,11 @@ class ArraysTest extends ScalaProjectsSpec {
     describe("when finding if all adjacent pairs in a list sum to a number") {
       it("should determine for a non-empty even list") {
         val a = List(0, 5, 1, 4, 2, 3, 4, 5)
-        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List(
-          (0, 5),
-          (1, 4),
-          (2, 3),
-          (5, 0)
-        )
+        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((0, 5), (1, 4), (2, 3), (5, 0))
       }
       it("should determine for a non-empty odd list") {
         val a = List(0, 5, 1, 4, 2, 3, 5)
-        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List(
-          (0, 5),
-          (1, 4),
-          (2, 3),
-          (5, 0)
-        )
+        findAdjacentPairsWhoseSumIs(a, 5) shouldBe List((0, 5), (1, 4), (2, 3), (5, 0))
       }
       it("should determine for a non-empty single-item list") {
         val a = List(5)
