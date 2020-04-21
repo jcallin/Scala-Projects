@@ -1,7 +1,7 @@
 // Code formatters and style checkers
 
 // https://github.com/scalameta/sbt-scalafmt
-addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.3.2")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.3.4")
 
 // Scapegoat - static code analysis
 // https://github.com/sksamuel/sbt-scapegoat
