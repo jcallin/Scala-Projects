@@ -11,7 +11,10 @@ object SymmetricTree {
       } else if ((root1 == null) ^ (root2 == null)) {
         false
       } else if (root1.value == root2.value) {
-        isSymmetricHelper(root1.left, root2.right) && isSymmetricHelper(root1.right, root2.left)
+        isSymmetricHelper(root1.left, root2.right) && isSymmetricHelper(
+          root1.right,
+          root2.left
+        )
       } else {
         false
       }

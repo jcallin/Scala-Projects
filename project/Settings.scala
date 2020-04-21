@@ -1,5 +1,5 @@
-import sbt.{Command, TaskKey}
 import sbt.Keys._
+import sbt.{Command, TaskKey}
 
 object Settings {
   import scoverage.ScoverageKeys._
@@ -14,8 +14,11 @@ object Settings {
     Command.command(
       "testAndCoverageReport",
       "Turns test coverage on, tests, generates a report, and turns coverage back off",
-      detail = "Single-command method of generating a coverage report during development"
-    ) { state => "coverageOn" :: clean :: test :: coverageCommand :: "coverageOff" :: state }
+      detail =
+        "Single-command method of generating a coverage report during development"
+    ) { state =>
+      "coverageOn" :: clean :: test :: coverageCommand :: "coverageOff" :: state
+    }
   }
 
   val rootSettings = Seq(

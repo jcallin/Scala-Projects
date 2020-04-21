@@ -33,7 +33,7 @@ object QuickSortSimplified {
       * @return (pivot value, items lesser than pivot, items greater than pivot)
       */
     def partition(l: IntList): (Int, IntList, IntList) = {
-      val pivot :: rest = l
+      val pivot :: rest     = l
       val (lesser, greater) = rest.partition(_ < pivot)
       (pivot, lesser, greater)
     }

@@ -13,11 +13,15 @@ object JsonWriterInstances {
   implicit val personWriter: JsonWriter[Person] =
     new JsonWriter[Person] {
       def write(value: Person): Json =
-        JsObject(Map("name" -> JsString(value.name), "email" -> JsString(value.email)))
+        JsObject(
+          Map("name" -> JsString(value.name), "email" -> JsString(value.email))
+        )
     }
 
   /** Is able to generate any JsonWriter for Option[A] as long as you have a JsonWriter[A] in scope*/
-  implicit def optionWriter[A](implicit writer: JsonWriter[A]): JsonWriter[Option[A]] = {
+  implicit def optionWriter[A](implicit
+      writer: JsonWriter[A]
+  ): JsonWriter[Option[A]] = {
     case Some(aValue) => writer.write(aValue)
     case None         => JsNull
   }
@@ -30,7 +34,9 @@ object JsonWriterInstancesSimplified {
     (value: String) => JsString(value)
   implicit val personWriter: JsonWriter[Person] =
     (value: Person) =>
-      JsObject(Map("name" -> JsString(value.name), "email" -> JsString(value.email)))
+      JsObject(
+        Map("name" -> JsString(value.name), "email" -> JsString(value.email))
+      )
 
   // etc...
 }

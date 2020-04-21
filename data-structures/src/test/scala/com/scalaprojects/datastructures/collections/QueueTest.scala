@@ -4,7 +4,7 @@ import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
 class QueueTest extends ScalaProjectsSpec {
   describe("a queue") {
-    val q = Queue[Int](1, 2)
+    val q       = Queue[Int](1, 2)
     val inTestQ = new Queue[Int](in = List(1, 2), out = List.empty)
     it("should provide head access") {
       // head from out
@@ -41,7 +41,8 @@ class QueueTest extends ScalaProjectsSpec {
 
     it("should throw exceptions on empty queue") {
       val emptyq = new Queue[Int](Nil, Nil)
-      lazy val exceptionOps = List(emptyq.dequeue _, emptyq.tail _, emptyq.head _)
+      lazy val exceptionOps =
+        List(emptyq.dequeue _, emptyq.tail _, emptyq.head _)
 
       exceptionOps.map(op => assertThrows[NoSuchElementException](op()))
     }

@@ -1,6 +1,9 @@
 package com.scalaprojects.exercises.leetcode
 
-import com.scalaprojects.exercises.leetcode.datastructures.{BinaryTree, TreeNode}
+import com.scalaprojects.exercises.leetcode.datastructures.{
+  BinaryTree,
+  TreeNode
+}
 import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
 class SymmetricTreeTest extends ScalaProjectsSpec {
@@ -29,7 +32,9 @@ class SymmetricTreeTest extends ScalaProjectsSpec {
       val tree = BinaryTree.fromArray(Array(0, 1, 2))
       SymmetricTree.isSymmetric(tree) shouldBe false
     }
-    it("an asymmetric tree where whose two sides have different numbers of nodes") {
+    it(
+      "an asymmetric tree where whose two sides have different numbers of nodes"
+    ) {
       val tree = BinaryTree.fromArray(Array(0, 1))
       SymmetricTree.isSymmetric(tree) shouldBe false
     }

@@ -21,7 +21,7 @@ object NTree {
         queue = newQueue
         pair match {
           case first :: second :: Nil =>
-            val leftChild = TreeNode(first)
+            val leftChild  = TreeNode(first)
             val rightChild = TreeNode(second)
             parent.left = Some(leftChild)
             parent.right = Some(rightChild)

@@ -11,8 +11,8 @@ object ReverseArrayIterative {
   def reverseArrayIterative[T](a: Array[T]): Array[T] = {
     // Set up bounds
     val start = 0
-    val end = a.length - 1
-    val mid = (a.length - 1) / 2
+    val end   = a.length - 1
+    val mid   = (a.length - 1) / 2
 
     // Set up ranges
     val i = start to mid

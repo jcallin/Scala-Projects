@@ -1,7 +1,9 @@
 package com.scalaprojects.exercises.leetcode
 
 import com.scalaprojects.datastructures.node.TreeNode
-import com.scalaprojects.exercises.leetcode.datastructures.{TreeNode => TreeNodeUnsafe}
+import com.scalaprojects.exercises.leetcode.datastructures.{
+  TreeNode => TreeNodeUnsafe
+}
 
 object SortedArrayToBst {
 
@@ -12,9 +14,9 @@ object SortedArrayToBst {
       TreeNodeUnsafe(nums.head)
     } else {
       val midpoint = nums.length / 2
-      val root = TreeNodeUnsafe(nums(midpoint))
+      val root     = TreeNodeUnsafe(nums(midpoint))
 
-      val firstHalf = nums.take(midpoint)
+      val firstHalf  = nums.take(midpoint)
       val secondHalf = nums.drop(midpoint + 1)
       root.left = sortedArrayToBstUnsafe(firstHalf)
       root.right = sortedArrayToBstUnsafe(secondHalf)
@@ -32,7 +34,7 @@ object SortedArrayToBst {
 
           val root = TreeNode(items(midpoint))
 
-          val firstHalf = items.take(midpoint)
+          val firstHalf  = items.take(midpoint)
           val secondHalf = items.drop(midpoint + 1)
           root.left = sortedArrayToBstHelper(firstHalf)
           root.right = sortedArrayToBstHelper(secondHalf)

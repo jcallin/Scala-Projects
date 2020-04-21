@@ -16,17 +16,20 @@ class UserDatabase(val users: List[User] = List.empty) extends StrictLogging {
       logger.warn(s"No user ${user.name} exists to mail to")
       false
     } else {
-      inboxes =
-        inboxes.updatedWith(user)(emails => Some(message :: emails.getOrElse(List.empty[String])))
+      inboxes = inboxes.updatedWith(user)(emails =>
+        Some(message :: emails.getOrElse(List.empty[String]))
+      )
       true
     }
   }
 
   /** Get mail messages for a user */
   def getMailFor(user: User): List[String] = {
-    inboxes.getOrElse(user, {
-      logger.warn(s"No user ${user.name} exists to get mail for")
-      List.empty
-    })
+    inboxes.getOrElse(
+      user, {
+        logger.warn(s"No user ${user.name} exists to get mail for")
+        List.empty
+      }
+    )
   }
 }

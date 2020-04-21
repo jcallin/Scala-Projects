@@ -1,7 +1,7 @@
 package com.scalaprojects.exercises.leetcode
 
+import com.scalaprojects.exercises.leetcode.AddTwoNumbers.ListNode
 import com.scalaprojects.tools.testtools.ScalaProjectsSpec
-import AddTwoNumbers.ListNode
 
 class AddTwoNumbersTest extends ScalaProjectsSpec {
   val inputA0 = ListNode(2)
@@ -40,12 +40,18 @@ class AddTwoNumbersTest extends ScalaProjectsSpec {
 
   describe("when adding two linked lists") {
     it("adds two linked lists of equal size") {
-      AddTwoNumbers.addTwoNumbers(inputA, inputB).toString shouldBe output.toString
+      AddTwoNumbers
+        .addTwoNumbers(inputA, inputB)
+        .toString shouldBe output.toString
     }
     it("adds two linked lists of different sizes") {
       val inputC = inputA1
-      AddTwoNumbers.addTwoNumbers(inputB, inputC).toString shouldBe "9 -> 9 -> 4"
-      AddTwoNumbers.addTwoNumbers(inputC, inputB).toString shouldBe "9 -> 9 -> 4"
+      AddTwoNumbers
+        .addTwoNumbers(inputB, inputC)
+        .toString shouldBe "9 -> 9 -> 4"
+      AddTwoNumbers
+        .addTwoNumbers(inputC, inputB)
+        .toString shouldBe "9 -> 9 -> 4"
     }
   }
 }

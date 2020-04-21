@@ -1,7 +1,7 @@
 package com.scalaprojects.algorithms.sequences
 
 object Permutations {
-  type Permutation[T] = List[T]
+  type Permutation[T]  = List[T]
   type Permutations[T] = List[Permutation[T]]
 
   /**
@@ -9,7 +9,10 @@ object Permutations {
     *
     */
   def allPermutationsOf[T](sequence: List[T]): Permutations[T] = {
-    def allPermutationsOfHelper(seq: List[T], acc: Permutations[T]): Permutations[T] = {
+    def allPermutationsOfHelper(
+        seq: List[T],
+        acc: Permutations[T]
+    ): Permutations[T] = {
       seq match {
         case Nil         => acc
         case head :: Nil => List(head) :: acc
