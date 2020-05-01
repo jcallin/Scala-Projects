@@ -63,16 +63,20 @@ lazy val tools = Project(
   Seq(
     Keys.name := "tools",
     Keys.description := "Tools to share between projects",
-    Keys.libraryDependencies ++= commonDependencies ++ testDependencies
+    Keys.libraryDependencies ++= Set(
+      commonDependencies ++ testDependencies.map(_ % Compile)
+    ).toSeq.flatten
   ) ++ Settings.commonSettings
 )
-val commonDependencies = Seq(
-  "org.scalactic" %% "scalactic" % "3.0.8",
-  "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.0",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
-  "org.typelevel" %% "cats-core" % "2.0.0"
-)
+
 val testDependencies = Seq(
-  "org.scalatest" %% "scalatest" % "3.0.8",
+  // paired by suggestion
+  "org.scalatest" %% "scalatest" % "3.1.1",
   "org.scalamock" %% "scalamock" % "4.3.0"
 )
+
+val commonDependencies = Seq(
+  "org.scala-lang.modules"     %% "scala-java8-compat" % "0.9.0",
+  "com.typesafe.scala-logging" %% "scala-logging"      % "3.9.2",
+  "org.typelevel"              %% "cats-core"          % "2.0.0"
+) ++ testDependencies.map(_     % Test)
