@@ -4,8 +4,7 @@ object QuickSortSimplified {
 
   type IntList = List[Int]
 
-  /**
-    * Sort an array by quicksort using some scala sugar and List instead of Array
+  /** Sort an array by quicksort using some scala sugar and List instead of Array
     *
     * Time:
     * worst:   n2 (randomize partition index for nlogn average)
@@ -26,14 +25,13 @@ object QuickSortSimplified {
       }
     }
 
-    /**
-      * Return partitions of a list partitioned around the first element
+    /** Return partitions of a list partitioned around the first element
       *
       * @param l list to partition
       * @return (pivot value, items lesser than pivot, items greater than pivot)
       */
     def partition(l: IntList): (Int, IntList, IntList) = {
-      val pivot :: rest = l
+      val pivot :: rest     = l
       val (lesser, greater) = rest.partition(_ < pivot)
       (pivot, lesser, greater)
     }

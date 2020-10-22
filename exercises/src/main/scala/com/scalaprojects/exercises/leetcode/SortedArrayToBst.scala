@@ -12,12 +12,14 @@ object SortedArrayToBst {
       TreeNodeUnsafe(nums.head)
     } else {
       val midpoint = nums.length / 2
-      val root = TreeNodeUnsafe(nums(midpoint))
+      val root     = TreeNodeUnsafe(nums(midpoint))
 
-      val firstHalf = nums.take(midpoint)
+      val firstHalf  = nums.take(midpoint)
       val secondHalf = nums.drop(midpoint + 1)
+
       root.left = sortedArrayToBstUnsafe(firstHalf)
       root.right = sortedArrayToBstUnsafe(secondHalf)
+
       root
     }
   }
@@ -27,17 +29,16 @@ object SortedArrayToBst {
       nums match {
         case Nil               => None
         case singleItem :: Nil => Some(TreeNode(singleItem))
-        case items => {
+        case items =>
           val midpoint = items.length / 2
 
           val root = TreeNode(items(midpoint))
 
-          val firstHalf = items.take(midpoint)
+          val firstHalf  = items.take(midpoint)
           val secondHalf = items.drop(midpoint + 1)
           root.left = sortedArrayToBstHelper(firstHalf)
           root.right = sortedArrayToBstHelper(secondHalf)
           Some(root)
-        }
       }
 
     }

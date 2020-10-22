@@ -2,7 +2,7 @@ package com.scalaprojects.datastructures.linkedlists
 
 import com.scalaprojects.datastructures.node.SingleNode
 
-/** A given linked list is iterable given a head node*/
+/** A given linked list is iterable given a head node */
 class LinkedListIterable(head: Option[SingleNode]) extends Iterator[Option[SingleNode]] {
   // Use var for simple way to store state
   // Todo: How to remove?

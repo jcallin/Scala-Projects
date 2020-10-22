@@ -4,8 +4,7 @@ import scala.annotation.tailrec
 
 object FibonacciRecursive {
 
-  /**
-    * Return the nth fibonacci number using recursion
+  /** Return the nth fibonacci number using recursion
     *
     * @param n the fibonacci number to calculate
     */

@@ -5,9 +5,9 @@ import scala.collection.mutable
 object LongestSubstringWithoutRepeats {
   def longestSubstringWithoutRepeats(s: String): Int = {
     // Track each letter seen, as well as the index it was last seen at
-    var longestSeen = 0
+    var longestSeen            = 0
     val lettersSeenInSubstring = mutable.Map[Char, Int]()
-    var tracker = 0
+    var tracker                = 0
 
     while (tracker < s.length) {
       val currentLetter = s(tracker)

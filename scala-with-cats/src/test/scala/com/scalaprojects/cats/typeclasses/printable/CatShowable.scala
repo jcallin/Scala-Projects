@@ -7,8 +7,8 @@ import cats.syntax.show._
 
 object CatShowable {
   implicit val catShow = Show.show[Cat] { cat =>
-    val name = cat.name.show
-    val age = cat.age.show
+    val name  = cat.name.show
+    val age   = cat.age.show
     val color = cat.color.show
 
     s"$name is a $age year-old $color cat"

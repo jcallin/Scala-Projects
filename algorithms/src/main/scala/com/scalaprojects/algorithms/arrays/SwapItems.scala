@@ -2,8 +2,7 @@ package com.scalaprojects.algorithms.arrays
 
 object SwapItems {
 
-  /**
-    * Return an array with 2 elements swapped
+  /** Return an array with 2 elements swapped
     *
     * @param a    array to swap elements in
     * @param idx1 index to swap with idx2

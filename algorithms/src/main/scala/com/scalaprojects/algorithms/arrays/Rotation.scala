@@ -2,8 +2,7 @@ package com.scalaprojects.algorithms.arrays
 
 object Rotation {
 
-  /**
-    * Return an array with contents rotated to the left
+  /** Return an array with contents rotated to the left
     * @param a array to left rotate
     * @param n number of positions to rotate elements
     */
@@ -22,8 +21,7 @@ object Rotation {
     result
   }
 
-  /**
-    * Return an array with contents rotated to the right
+  /** Return an array with contents rotated to the right
     * @param a array to right rotate
     * @param n number of positions to rotate elements
     */

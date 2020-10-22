@@ -5,8 +5,7 @@ import scala.collection.immutable.ArraySeq
 
 object ReverseArrayRecursive {
 
-  /**
-    * Return an array reversed by recursion
+  /** Return an array reversed by recursion
     *
     * @param a array to reverse
     * @tparam T type of object in the array

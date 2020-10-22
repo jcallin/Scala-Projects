@@ -4,8 +4,7 @@ import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
 class SweeperTest extends ScalaProjectsSpec with UserDatabaseTestData {
 
-  /**
-    * This is an example of an integration test. The Sweeper is the "imperative shell" to the program which contains external dependencies
+  /** This is an example of an integration test. The Sweeper is the "imperative shell" to the program which contains external dependencies
     */
   describe("When running database sweeps") {
 

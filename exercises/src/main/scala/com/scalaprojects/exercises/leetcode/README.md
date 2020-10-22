@@ -53,9 +53,9 @@
       
       Note: You may not slant the container and n is at least 2.
       
-      In plain English, you are trying to maximize the area contained between 2 bars in a bar chart using the x-axis as the width, and the height of the lowest bar as the height. Which 2 bars create the container of maximum area?
+      In plain English, you are trying to maximize the area contained between 2 bars in a bar chart with many bars using the x-axis as the width, and the height of the lowest bar as the height. Which 2 bars create the container of maximum area?
       #### Example: 
-      See unit tests
+      ![Example](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg)
       
       #### Explanation:
       * Start with the container of maximum width

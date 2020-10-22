@@ -8,16 +8,14 @@ case class SinglyLinkedList(head: Option[SingleNode]) extends LinkedListIterable
 
 object SinglyLinkedList {
 
-  /**
-    * Return a [[SinglyLinkedList]] from a list of values
+  /** Return a [[SinglyLinkedList]] from a list of values
     * @param values for each node in the list
     */
   def apply(values: List[AnyVal]): SinglyLinkedList = {
     SinglyLinkedList(singlyLinkedListFromValues(values))
   }
 
-  /**
-    * Return the head of a singly linked list given a list of values.
+  /** Return the head of a singly linked list given a list of values.
     * The value of the head is the first value of the values list.
     * @param values for each node in the list
     */

@@ -2,8 +2,7 @@ package com.scalaprojects.datastructures.collections
 
 import scala.collection.AbstractSeq
 
-/**
-  * A simple implementation similar to [[scala.collection.immutable.Queue]]
+/** A simple implementation similar to [[scala.collection.immutable.Queue]]
   *
   * @param in list of items that have been inserted, with most recent insertion at head
   * @param out list queued items, with the next items to be removed at the head
@@ -40,7 +39,7 @@ class Queue[A](val in: List[A], out: List[A]) extends AbstractSeq[A] {
     if (idx < out.length) out.apply(idx)
     else {
       // If idx is in the in list
-      val otherOuts = in.reverse
+      val otherOuts    = in.reverse
       val idxOtherOuts = idx - out.length
       if (idxOtherOuts < otherOuts.length) otherOuts.apply(idxOtherOuts)
       else throw new NoSuchElementException("index out of range")

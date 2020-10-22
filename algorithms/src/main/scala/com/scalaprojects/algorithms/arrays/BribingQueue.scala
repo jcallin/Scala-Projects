@@ -2,8 +2,7 @@ package com.scalaprojects.algorithms.arrays
 
 object BribingQueue {
 
-  /**
-    * Return the number of bribes needed to get to the input configuration. If not possible, raise an exception
+  /** Return the number of bribes needed to get to the input configuration. If not possible, raise an exception
     * An array of ascending integers from 0 to n. A larger integer may bribe a smaller integer directly in front of them to swap spots in line
     * Any integer may only bribe twice, but may be bribed any number of times
     *

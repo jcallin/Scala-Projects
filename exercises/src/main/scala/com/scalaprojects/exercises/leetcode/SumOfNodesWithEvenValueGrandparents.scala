@@ -13,7 +13,10 @@ object SumOfNodesWithEvenValueGrandparents {
         val lChildValue = if (r.left != null && willSumChildren) r.left.value else 0
         val rChildValue = if (r.right != null && willSumChildren) r.right.value else 0
 
-        lChildValue + rChildValue + sumEvenGrandparentHelper(r.left, isEven) + sumEvenGrandparentHelper(
+        lChildValue + rChildValue + sumEvenGrandparentHelper(
+          r.left,
+          isEven
+        ) + sumEvenGrandparentHelper(
           r.right,
           isEven
         )

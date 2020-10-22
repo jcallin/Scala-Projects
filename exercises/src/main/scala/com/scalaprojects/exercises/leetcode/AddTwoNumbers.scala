@@ -1,15 +1,10 @@
 package com.scalaprojects.exercises.leetcode
 
-/**
-  * Definition for singly-linked list.
-  *
-  */
 object AddTwoNumbers {
 
   case class ListNode(x: Int = 0, var next: Option[ListNode] = None) {
 
-    /**
-      * Useful for seeing full list and don't want to implement equals
+    /** Useful for seeing full list and don't want to implement equals
       * use this to check equals between the 2 output strings
       */
     override def toString: String = {
@@ -33,7 +28,7 @@ object AddTwoNumbers {
       case (Some(l1Defined), None) => Some(l1Defined)
       case (None, Some(l2Defined)) => Some(l2Defined)
 
-      case (Some(l1Defined), Some(l2Defined)) => {
+      case (Some(l1Defined), Some(l2Defined)) =>
         val sum = l1Defined.x + l2Defined.x
         if (sum < 10) {
           val answerNode = ListNode(sum)
@@ -47,7 +42,6 @@ object AddTwoNumbers {
           )
           Some(answerNode)
         }
-      }
     }
 
   }

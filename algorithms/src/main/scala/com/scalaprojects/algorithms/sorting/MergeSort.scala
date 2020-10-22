@@ -2,8 +2,7 @@ package com.scalaprojects.algorithms.sorting
 
 object MergeSort {
 
-  /**
-    * Sort an array by mergesort
+  /** Sort an array by mergesort
     * Stable:         yes
     * Time:  worst:   nlogn
     * average:        nlogn
@@ -27,8 +26,7 @@ object MergeSort {
     }
   }
 
-  /**
-    * Merge 2 sorted arrays into a third array, replacing its values with sorted values from the other 2
+  /** Merge 2 sorted arrays into a third array, replacing its values with sorted values from the other 2
     *
     * @param l one array
     * @param r another array

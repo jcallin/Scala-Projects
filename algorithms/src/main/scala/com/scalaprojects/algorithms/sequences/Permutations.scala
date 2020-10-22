@@ -1,12 +1,10 @@
 package com.scalaprojects.algorithms.sequences
 
 object Permutations {
-  type Permutation[T] = List[T]
+  type Permutation[T]  = List[T]
   type Permutations[T] = List[Permutation[T]]
 
-  /**
-    * Return all permutations of a given sequence
-    *
+  /** Return all permutations of a given sequence
     */
   def allPermutationsOf[T](sequence: List[T]): Permutations[T] = {
     def allPermutationsOfHelper(seq: List[T], acc: Permutations[T]): Permutations[T] = {

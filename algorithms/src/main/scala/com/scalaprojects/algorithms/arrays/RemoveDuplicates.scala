@@ -4,8 +4,7 @@ import scala.annotation.tailrec
 
 object RemoveDuplicates {
 
-  /**
-    * Return an array with duplicates removed
+  /** Return an array with duplicates removed
     *
     * @param a array to de-duplicate
     * @tparam T type of object in the array

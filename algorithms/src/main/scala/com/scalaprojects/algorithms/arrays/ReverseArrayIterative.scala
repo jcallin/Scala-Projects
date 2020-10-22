@@ -2,8 +2,7 @@ package com.scalaprojects.algorithms.arrays
 
 object ReverseArrayIterative {
 
-  /**
-    * Return an array reversed by iteration
+  /** Return an array reversed by iteration
     *
     * @param a array to reverse
     * @tparam T type of object in the array
@@ -11,8 +10,8 @@ object ReverseArrayIterative {
   def reverseArrayIterative[T](a: Array[T]): Array[T] = {
     // Set up bounds
     val start = 0
-    val end = a.length - 1
-    val mid = (a.length - 1) / 2
+    val end   = a.length - 1
+    val mid   = (a.length - 1) / 2
 
     // Set up ranges
     val i = start to mid

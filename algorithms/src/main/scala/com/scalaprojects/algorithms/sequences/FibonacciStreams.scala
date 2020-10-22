@@ -2,8 +2,7 @@ package com.scalaprojects.algorithms.sequences
 
 object FibonacciStreams {
 
-  /**
-    * Return the nth fibonacci number from a stream
+  /** Return the nth fibonacci number from a stream
     *
     * @param n the fibonacci number to calculate
     */

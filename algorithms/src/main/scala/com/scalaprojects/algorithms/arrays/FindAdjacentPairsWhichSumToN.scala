@@ -5,8 +5,7 @@ import scala.annotation.tailrec
 object FindAdjacentPairsWhichSumToN {
   type IntPair = (Int, Int)
 
-  /**
-    * Return a list of pairs of adjacent integers in an array which add to a sum
+  /** Return a list of pairs of adjacent integers in an array which add to a sum
     *
     * @param a   array to check
     * @param sum check whether pairs add to this
