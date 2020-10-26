@@ -8,7 +8,7 @@ object BinaryTree {
     *
     * @param values for nodes of the tree
     */
-  def fromArray(values: Array[Any]): TreeNode = { // scalastyle:ignore cyclomatic.complexity method.length
+  def apply(values: Array[Any]): TreeNode = { // scalastyle:ignore cyclomatic.complexity method.length
     var queue = Queue.apply[TreeNode]()
     values.toList.headOption.map { case rootVal: Int =>
       val root = TreeNode(rootVal)

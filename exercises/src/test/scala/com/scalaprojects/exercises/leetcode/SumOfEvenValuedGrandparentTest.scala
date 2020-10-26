@@ -7,7 +7,7 @@ class SumOfEvenValuedGrandparentTest extends ScalaProjectsSpec {
   it("should calculate for a regular binary tree") {
     val nums = Array(6, 7, 8, 2, 7, 1, 3, 9, null, 1, 4, null, null, null, 5)
 
-    SumOfNodesWithEvenValueGrandparents.sumEvenGrandparent(BinaryTree.fromArray(nums)) shouldBe 18
+    SumOfNodesWithEvenValueGrandparents.sumEvenGrandparent(BinaryTree(nums)) shouldBe 18
 
   }
 }
