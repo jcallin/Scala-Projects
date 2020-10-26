@@ -1,21 +1,8 @@
 package com.scalaprojects.exercises.leetcode
 
+import com.scalaprojects.exercises.leetcode.datastructures.ListNode
+
 object AddTwoNumbers {
-
-  case class ListNode(x: Int = 0, var next: Option[ListNode] = None) {
-
-    /** Useful for seeing full list and don't want to implement equals
-      * use this to check equals between the 2 output strings
-      */
-    override def toString: String = {
-      def toStringHelper(l: ListNode): String = {
-        l.next
-          .map { lNextDefined => s"${l.x} -> " + toStringHelper(lNextDefined) }
-          .getOrElse(s"${l.x}")
-      }
-      toStringHelper(this)
-    }
-  }
 
   def addTwoNumbers(l1: ListNode, l2: ListNode): ListNode = {
     addTwoNumbersHelper(Some(l1), Some(l2))
@@ -29,7 +16,7 @@ object AddTwoNumbers {
       case (None, Some(l2Defined)) => Some(l2Defined)
 
       case (Some(l1Defined), Some(l2Defined)) =>
-        val sum = l1Defined.x + l2Defined.x
+        val sum = l1Defined.value + l2Defined.value
         if (sum < 10) {
           val answerNode = ListNode(sum)
           answerNode.next = addTwoNumbersHelper(l1Defined.next, l2Defined.next)

@@ -1,7 +1,7 @@
 package com.scalaprojects.exercises.leetcode
 
+import com.scalaprojects.exercises.leetcode.datastructures.ListNode
 import com.scalaprojects.tools.testtools.ScalaProjectsSpec
-import AddTwoNumbers.ListNode
 
 class AddTwoNumbersTest extends ScalaProjectsSpec {
   val inputA0 = ListNode(2)
