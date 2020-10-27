@@ -1,11 +1,11 @@
-package com.scalaprojects.algorithms.trees
+package com.scalaprojects.algorithms.graphs
 
 import com.scalaprojects.datastructures.node.{GraphNode, TreeNode}
 
 import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 
-object BreadthFirstSearch {
+object BreadthFirst {
 
   /** Perform a level-order traversal of a binary tree and return nodes at each level, starting at the root
     *
@@ -32,16 +32,16 @@ object BreadthFirstSearch {
     result.map(_.toList).toList
   }
 
-  /** Performs a breadth first search on a graph
+  /** Performs a breadth first traversal of a graph
     *
-    * @param root the node at which to start the search
+    * @param node at which to start the traversal
     * @return values in breadth-first order
     */
-  def breadthFirstSearch(root: GraphNode): List[AnyVal] = {
+  def breadthFirstTraversal(node: GraphNode): List[AnyVal] = {
     val result  = mutable.ListBuffer[AnyVal]()
     val queue   = mutable.Queue[GraphNode]()
     val visited = mutable.Set[GraphNode]()
-    queue.enqueue(root)
+    queue.enqueue(node)
 
     while (queue.nonEmpty) {
       val levelSize = queue.size

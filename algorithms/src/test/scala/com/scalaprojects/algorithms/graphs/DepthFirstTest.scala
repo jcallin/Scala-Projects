@@ -1,20 +1,16 @@
-package com.scalaprojects.algorithms.trees
+package com.scalaprojects.algorithms.graphs
 
 import com.scalaprojects.datastructures.node.GraphNode
 import com.scalaprojects.datastructures.trees.BinaryTree
 import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
-class BreadthFirstSearchTest extends ScalaProjectsSpec {
-  it("traverses a tree using BFS") {
+class DepthFirstTest extends ScalaProjectsSpec {
+  it("traverses a tree using DFS") {
     val values = List(1, 2, 3, 4, 5, 6, 7)
-    val result = List(
-      List(1),
-      List(2, 3),
-      List(4, 5, 6, 7)
-    )
-    BreadthFirstSearch.levelOrder(BinaryTree(values).root.get) shouldBe result
+    val result = List(1, 3, 7, 6, 2, 5, 4)
+    DepthFirst.inOrder(BinaryTree(values).root.get) shouldBe result
   }
-  it("traverses a generic graph using BFS") {
+  it("traverses a generic graph using DFS") {
     val node1 = GraphNode(value = 1)
     val graph = GraphNode(
       value = 0,
@@ -24,7 +20,6 @@ class BreadthFirstSearchTest extends ScalaProjectsSpec {
         GraphNode(value = 2, next = Seq(GraphNode(value = 3, next = Seq(node1))))
       )
     )
-    BreadthFirstSearch.breadthFirstSearch(graph) shouldBe Seq(0, 1, 4, 2, 3)
+    DepthFirst.depthFirstTraversal(graph) shouldBe Seq(0, 2, 3, 1, 4)
   }
-
 }
