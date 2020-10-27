@@ -6,22 +6,19 @@ import com.scalaprojects.exercises.leetcode.datastructures.{TreeNode => TreeNode
 object SortedArrayToBst {
 
   def sortedArrayToBstUnsafe(nums: Array[Int]): TreeNodeUnsafe = {
-    if (nums.isEmpty) {
-      null
-    } else if (nums.length == 1) {
-      TreeNodeUnsafe(nums.head)
-    } else {
-      val midpoint = nums.length / 2
-      val root     = TreeNodeUnsafe(nums(midpoint))
-
-      val firstHalf  = nums.take(midpoint)
-      val secondHalf = nums.drop(midpoint + 1)
-
-      root.left = sortedArrayToBstUnsafe(firstHalf)
-      root.right = sortedArrayToBstUnsafe(secondHalf)
-
-      root
+    if (nums.length == 1) {
+      return TreeNodeUnsafe(nums.head)
+    } else if (nums.isEmpty) {
+      return null
     }
+    val middleIndex = nums.length / 2
+    val above       = nums.take(middleIndex)
+    val below       = nums.drop(middleIndex + 1)
+
+    val result = TreeNodeUnsafe(nums(middleIndex))
+    result.left = sortedArrayToBstUnsafe(above)
+    result.right = sortedArrayToBstUnsafe(below)
+    result
   }
 
   def sortedArrayToBstIdiomatic(nums: Array[Int]): TreeNode = {

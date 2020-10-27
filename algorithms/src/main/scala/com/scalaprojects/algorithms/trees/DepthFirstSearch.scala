@@ -13,8 +13,8 @@ object DepthFirstSearch {
     while (stack.nonEmpty) {
       val current = stack.pop()
       result.append(current.value)
-      current.left.map(stack.push)
-      current.right.map(stack.push)
+      current.left.foreach(stack.push)
+      current.right.foreach(stack.push)
     }
     result.toList
   }
