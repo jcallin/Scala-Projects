@@ -9,20 +9,20 @@ class RemoveNodesOfValueZeroTest extends ScalaProjectsSpec {
   it("removes nodes of value 0") {
     val list = ListNode(
       0,
-      Some(ListNode(
+      ListNode(
         1,
-        Some(ListNode(
+        ListNode(
           0,
-          Some(ListNode(
+          ListNode(
             2,
-            Some(ListNode(
+            ListNode(
               0
-            ))
-          ))
-        ))
-      ))
+            )
+          )
+        )
+      )
     )
-    removeNodesOfValueZero(list).get.toString shouldBe "1 -> 2"
+    removeNodesOfValueZero(list).toString shouldBe "1 -> 2"
   }
 
 }

@@ -17,20 +17,20 @@ class AddTwoNumbersTest extends ScalaProjectsSpec {
   val output2 = ListNode(8)
 
   val inputA = {
-    inputA0.next = Some(inputA1)
-    inputA1.next = Some(inputA2)
+    inputA0.next = inputA1
+    inputA1.next = inputA2
     inputA0
   }
 
   val inputB = {
-    inputB0.next = Some(inputB1)
-    inputB1.next = Some(inputB2)
+    inputB0.next = inputB1
+    inputB1.next = inputB2
     inputB0
   }
 
   val output = {
-    output0.next = Some(output1)
-    output1.next = Some(output2)
+    output0.next = output1
+    output1.next = output2
     output0
   }
 
