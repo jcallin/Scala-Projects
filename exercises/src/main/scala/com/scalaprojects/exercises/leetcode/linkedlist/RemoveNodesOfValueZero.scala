@@ -1,4 +1,4 @@
-package com.scalaprojects.exercises.leetcode
+package com.scalaprojects.exercises.leetcode.linkedlist
 
 import com.scalaprojects.exercises.leetcode.datastructures.ListNode
 

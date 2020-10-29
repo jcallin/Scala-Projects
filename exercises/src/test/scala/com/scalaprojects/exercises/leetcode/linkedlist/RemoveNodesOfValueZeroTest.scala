@@ -1,7 +1,7 @@
-package com.scalaprojects.exercises.leetcode
+package com.scalaprojects.exercises.leetcode.linkedlist
 
-import com.scalaprojects.exercises.leetcode.RemoveNodesOfValueZero._
 import com.scalaprojects.exercises.leetcode.datastructures.ListNode
+import com.scalaprojects.exercises.leetcode.linkedlist.RemoveNodesOfValueZero._
 import com.scalaprojects.tools.testtools.ScalaProjectsSpec
 
 class RemoveNodesOfValueZeroTest extends ScalaProjectsSpec {
