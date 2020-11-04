@@ -48,23 +48,25 @@ object DepthFirstIteration {
 
   /** Perform an in-order depth-first traversal of a binary tree using iteration and a stack
     *
-    * @param root of the tree
+    * @param r root of the tree
     * @return the value of each node, in-order traversal (L, Root, R)
     */
-  def inOrder(root: TreeNode): List[AnyVal] = {
-    val stack               = mutable.Stack[TreeNode]()
-    val result              = mutable.ListBuffer[AnyVal]()
-    var r: Option[TreeNode] = Some(root)
+  def inOrder(r: TreeNode): List[AnyVal] = {
+    val stack                  = mutable.Stack[TreeNode]()
+    val result                 = mutable.ListBuffer[AnyVal]()
+    var root: Option[TreeNode] = Some(r)
 
-    while (r.isDefined || stack.nonEmpty) {
+    while (root.isDefined || stack.nonEmpty) {
       // Push all the left nodes on to the stack
-      while (r.isDefined) {
-        stack.push(r.get)
-        r = r.get.left
+      // If this isn't the first time, it will push the next parent node to visit onto the stack
+      while (root.isDefined) {
+        stack.push(root.get)
+        root = root.get.left
       }
-      r = Some(stack.pop())
-      result.append(r.get.value)
-      r = r.get.right
+      root = Some(stack.pop())
+      result.append(root.get.value)
+      // Go to the next bottom-most right node of the tree
+      root = root.get.right
     }
 
     result.toList

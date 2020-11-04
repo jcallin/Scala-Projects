@@ -7,28 +7,25 @@ object LongestSubstringWithoutRepeats {
     // Track each letter seen, as well as the index it was last seen at
     var longestSeen            = 0
     val lettersSeenInSubstring = mutable.Map[Char, Int]()
-    var tracker                = 0
+    var startingIndex          = 0 // Track the start of the substring
 
-    while (tracker < s.length) {
-      val currentLetter = s(tracker)
+    for (currentIndex <- s.indices) {
+      val currentLetter = s(currentIndex)
 
-      if (!lettersSeenInSubstring.contains(currentLetter)) {
-        lettersSeenInSubstring.addOne(currentLetter, tracker)
-      } else {
-        if (lettersSeenInSubstring.size > longestSeen) {
-          longestSeen = lettersSeenInSubstring.size
-        }
-
-        // Go back to the last place the letter was seen
-        tracker = lettersSeenInSubstring(currentLetter)
-        // Reset the map
-        lettersSeenInSubstring.clear()
+      // If we've seen the letter, set the starting index to 1 past the first occurrence of the letter
+      if (lettersSeenInSubstring.contains(currentLetter)) {
+        // Use .max() to ensure the starting index is not set to a letter before where it is already
+        startingIndex = Math.max(startingIndex, lettersSeenInSubstring(currentLetter) + 1)
       }
-      tracker += 1
+
+      // Mark that we've seen the currentLetter at currentIndex
+      lettersSeenInSubstring.addOne(currentLetter, currentIndex)
+
+      // Check if the longest has been achieved
+      // Don't worry about modifying the hashmap because we are just taking the diff of the 2 pointers
+      longestSeen = Math.max(longestSeen, currentIndex - startingIndex + 1)
     }
-    if (lettersSeenInSubstring.size > longestSeen) {
-      longestSeen = lettersSeenInSubstring.size
-    }
+
     longestSeen
   }
 }

@@ -5,7 +5,7 @@ import scala.collection.mutable
 object OpenTheLock {
   def openTheLock(deadends: Array[String], target: String): Int = { // scalastyle:ignore cyclomatic.complexity
     val intialState = "0000"
-    val deadEnds    = Set(deadends: _*)
+    val deadEnds    = Set(deadends.toIndexedSeq.flatten)
     val visited     = mutable.Set(intialState)
 
     val queue: mutable.Queue[String] = mutable.Queue[String]()
