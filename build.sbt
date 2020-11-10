@@ -13,6 +13,16 @@ lazy val root = (project in file("."))
   .aggregate(tools, algorithms, dataStructures, exercises, scalaWithCats)
   .settings(Settings.rootSettings)
 
+val akkaEssentials = Project(
+  base = file("akka-essentials"),
+  id = "akka-essentials"
+)
+  .settings(
+    Seq(
+      Keys.libraryDependencies ++= commonDependencies ++ Dependencies.akkaDependencies
+    ) ++ Settings.commonSettings
+  )
+
 lazy val dataStructures = Project(
   base = file("data-structures"),
   id = "data-structures"
