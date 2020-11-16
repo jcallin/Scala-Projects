@@ -18,17 +18,27 @@ object Database {
 
   def createTable(): Unit = {
     sql"""
-      create table members (
-        id serial not null primary key,
-        name varchar(64),
-        created_at timestamp not null
+      create table addresses (
+        file_number varchar(64),
+        address varchar(64),
+        updated_at varchar(64)
       )
     """.execute.apply()
 
-    // insert initial data
-    Seq("Alice", "Bob", "Chris") foreach { name =>
-      sql"insert into members (name, created_at) values ($name, current_timestamp)".update.apply()
-    }
+    sql"""
+      create table registrations (
+        file_number varchar(64),
+        name varchar(64),
+        active boolean,
+        filing_date varchar(64),
+        updated_at varchar(64)
+      )
+    """.execute.apply()
+
+//    // insert initial data
+//    Seq("Alice", "Bob", "Chris") foreach { name =>
+//      sql"insert into members (name, created_at) values ($name, current_timestamp)".update.apply()
+//    }
 
   }
 
