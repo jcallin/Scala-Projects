@@ -1,4 +1,4 @@
-package exercise.database.schemas
+package middesk.database.schemas
 // defines entity object and extractor
 import java.time._
 import scalikejdbc.{WrappedResultSet, _}

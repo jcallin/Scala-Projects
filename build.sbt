@@ -61,14 +61,14 @@ lazy val exercises = Project(
     ) ++ Settings.commonSettings
   )
 
-val middesk = Project(
-  base = file("middesk"),
-  id = "middesk"
+val interviews = Project(
+  base = file("interviews"),
+  id = "interviews"
 ).dependsOn(tools % Test)
   .settings(
     Seq(
-      Keys.name := "middesk",
-      Keys.description := "Interview with Middesk",
+      Keys.name := "interviews",
+      Keys.description := "Interview projects",
       Keys.libraryDependencies ++= commonDependencies ++ scalikeJdbcDependencies
     ) ++ Settings.commonSettings
   )

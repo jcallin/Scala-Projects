@@ -1,9 +1,9 @@
-package exercise
+package middesk
 
 import java.net.URL
 
 import com.typesafe.config.ConfigFactory
-import exercise.database.Database
+import middesk.database.Database
 import org.apache.commons.csv.{CSVFormat, CSVParser}
 import scalikejdbc._
 import sttp.client3.{HttpURLConnectionBackend, _}

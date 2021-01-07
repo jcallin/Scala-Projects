@@ -1,7 +1,7 @@
-package exercise.database
+package middesk.database
 
 import com.typesafe.config.ConfigFactory
-import exercise.database.schemas.Member
+import middesk.database.schemas.Member
 import scalikejdbc._
 
 object Database {
